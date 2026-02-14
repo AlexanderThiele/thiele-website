@@ -1,6 +1,6 @@
-# Project Overview: website
+# Project Overview: Personal Blog
 
-A documentation site built with the [Jaspr](https://jaspr.site) framework for Dart. This project utilizes `jaspr_content` to render Markdown files from the `content/` directory into a structured documentation website.
+A personal blog built with the [Jaspr](https://jaspr.site) framework for Dart. This project utilizes `jaspr_content` to render blog posts from Markdown files in the `content/` directory into a structured, readable website.
 
 ## Main Technologies
 - **Language:** Dart
@@ -10,14 +10,13 @@ A documentation site built with the [Jaspr](https://jaspr.site) framework for Da
 
 ## Project Structure
 - `lib/`: Contains the Dart source code.
-    - `main.server.dart`: The entry point for server-side rendering. Configures the `ContentApp`, including layout, sidebar, components, and theme.
+    - `main.server.dart`: The entry point for server-side rendering. Configures the blog layout, sidebar navigation, custom components, and theme.
     - `main.client.dart`: The entry point for client-side hydration.
-    - `components/`: Custom Jaspr components (e.g., `Clicker`).
-- `content/`: Contains the Markdown files (`.md`) that serve as the site's pages.
-    - `_data/`: Configuration data for the site and links.
-- `web/`: Static assets like icons and images.
+    - `components/`: Custom Jaspr components used within the blog.
+- `content/`: Contains the blog articles as Markdown files (`.md`).
+    - `_data/`: Configuration data for the blog, links, and site-wide metadata.
+- `web/`: Static assets like profile pictures, icons, and images.
 - `pubspec.yaml`: Project metadata, dependencies, and Jaspr configuration.
-- `analysis_options.yaml`: Linting rules for the project.
 
 ## Building and Running
 The project uses the `jaspr` CLI for development and production builds.
@@ -35,8 +34,8 @@ The project uses the `jaspr` CLI for development and production builds.
   The build output will be located in the `build/jaspr/` directory.
 
 ## Development Conventions
-- **Content Management:** New pages should be added as Markdown files in the `content/` directory.
-- **Custom Components:** Components intended to be used within Markdown files should be registered in `lib/main.server.dart` using the `CustomComponent` parser.
-- **Client-Side Interactivity:** Use the `@client` annotation for components that require client-side state or interactivity (like `Clicker`).
-- **Styling:** Styles can be defined using Jaspr's CSS-in-Dart approach (e.g., using `@css` annotations in components).
-- **Linting:** The project follows standard Dart linting rules as defined in `analysis_options.yaml`.
+- **Writing Articles:** New blog posts should be added as Markdown files in the `content/` directory. Use frontmatter for metadata like title, date, and tags.
+- **Custom Components:** Components intended to be used within blog posts should be registered in `lib/main.server.dart` using the `CustomComponent` parser.
+- **Client-Side Interactivity:** Use the `@client` annotation for components that require client-side state or interactivity (like a comments section or like button).
+- **Styling:** Maintain a clean, readable blog aesthetic. Styles are defined using Jaspr's CSS-in-Dart approach within components.
+- **Linting:** Follow standard Dart linting rules as defined in `analysis_options.yaml`.

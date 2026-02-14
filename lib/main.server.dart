@@ -59,14 +59,34 @@ void main() {
         Image(zoom: true),
       ],
       layouts: [
-        
-        BlogLayout(
+        DocsLayout(
           header: Header(
-            title: 'My Docs',
+            title: 'My Blog',
             logo: '/images/logo.svg',
             items: [
               ThemeToggle(),
               GitHubButton(repo: 'schultek/jaspr'),
+            ],
+          ),
+          sidebar: Sidebar(
+            groups: [
+              SidebarGroup(
+                links: [
+                  SidebarLink(text: "Home", href: '/'),
+                ],
+              ),
+              SidebarGroup(
+                title: 'Blog',
+                links: [
+                  SidebarLink(text: "My First Post", href: '/blog/my-first-post'),
+                ],
+              ),
+              SidebarGroup(
+                title: 'Info',
+                links: [
+                  SidebarLink(text: "About", href: '/about'),
+                ],
+              ),
             ],
           ),
         ),
