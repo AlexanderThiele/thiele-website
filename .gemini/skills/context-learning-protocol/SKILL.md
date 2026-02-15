@@ -16,7 +16,7 @@ During or after a task, actively identify **TECHNICAL** aspects only:
 - **Preferences:** User-stated likes/dislikes regarding style, syntax, or workflow (e.g., "User prefers 2-space indentation" or "Always use named parameters").
 - **Learnings:** Solutions to tricky bugs, quirks of the codebase, or performance optimizations (e.g., "Hot reload fails when modifying `main.server.dart`").
 
-**DO NOT** save non-technical decisions, project management updates, or purely content-related changes unless they involve a technical implementation detail.
+**DO NOT** save non-technical decisions, project management updates, minor tooling additions (e.g., generic CLI shortcuts), or purely content-related changes unless they involve a critical technical implementation detail or architectural shift. Focus exclusively on development-specific or product-related context.
 
 ### 2. File Naming Convention
 Save new context files in `context/` with descriptive, kebab-case names and a `.md` extension.
