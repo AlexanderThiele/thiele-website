@@ -8,8 +8,6 @@ library;
 import 'package:jaspr/server.dart';
 
 import 'package:jaspr_content/components/callout.dart';
-import 'package:jaspr_content/components/code_block.dart';
-import 'package:jaspr_content/components/github_button.dart';
 import 'package:jaspr_content/components/header.dart';
 import 'package:jaspr_content/components/image.dart';
 import 'package:jaspr_content/components/sidebar.dart';
@@ -18,6 +16,8 @@ import 'package:jaspr_content/jaspr_content.dart';
 import 'package:jaspr_content/theme.dart';
 
 import 'components/clicker.dart';
+import 'components/blog_grid.dart';
+import 'components/hero.dart';
 
 // This file is generated automatically by Jaspr, do not remove or edit.
 import 'main.server.options.dart';
@@ -36,6 +36,7 @@ void main() {
     ContentApp(
       // Enables mustache templating inside the markdown files.
       templateEngine: MustacheTemplateEngine(),
+      eagerlyLoadAllPages: true,
       parsers: [
         MarkdownParser(),
       ],
@@ -48,12 +49,18 @@ void main() {
       components: [
         // The <Info> block and other callouts.
         Callout(),
-        // Adds syntax highlighting to code blocks.
-        CodeBlock(),
         // Adds a custom Jaspr component to be used as <Clicker/> in markdown.
         CustomComponent(
           pattern: 'Clicker',
           builder: (_, _, _) => Clicker(),
+        ),
+        CustomComponent(
+          pattern: 'Hero',
+          builder: (_, _, _) => Hero(),
+        ),
+        CustomComponent(
+          pattern: 'BlogGrid',
+          builder: (_, _, _) => BlogGrid(),
         ),
         // Adds zooming and caption support to images.
         Image(zoom: true),
@@ -61,11 +68,10 @@ void main() {
       layouts: [
         DocsLayout(
           header: Header(
-            title: 'My Blog',
+            title: 'Alexander Thiele',
             logo: '/images/logo.svg',
             items: [
               ThemeToggle(),
-              GitHubButton(repo: 'schultek/jaspr'),
             ],
           ),
           sidebar: Sidebar(
@@ -78,7 +84,7 @@ void main() {
               SidebarGroup(
                 title: 'Blog',
                 links: [
-                  SidebarLink(text: "My First Post", href: '/blog/my-first-post'),
+                  SidebarLink(text: "All Posts", href: '/blog'),
                 ],
               ),
               SidebarGroup(

@@ -11,10 +11,12 @@ This skill enforces a disciplined approach to knowledge management within the pr
 ## Protocol Workflow
 
 ### 1. Identify Learnings
-During or after a task, actively identify:
+During or after a task, actively identify **TECHNICAL** aspects only:
 - **Decisions:** Architectural choices, library selections, or significant refactors (e.g., "Switched from Provider to Riverpod because...").
 - **Preferences:** User-stated likes/dislikes regarding style, syntax, or workflow (e.g., "User prefers 2-space indentation" or "Always use named parameters").
 - **Learnings:** Solutions to tricky bugs, quirks of the codebase, or performance optimizations (e.g., "Hot reload fails when modifying `main.server.dart`").
+
+**DO NOT** save non-technical decisions, project management updates, or purely content-related changes unless they involve a technical implementation detail.
 
 ### 2. File Naming Convention
 Save new context files in `context/` with descriptive, kebab-case names and a `.md` extension.

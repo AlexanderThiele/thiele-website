@@ -1,12 +1,10 @@
 # Site Configuration
-titleBase: BLOG
+titleBase: thiele.dev
 favicon: favicon.ico
 
 # Social media links
 social:
-  - name: Github
-    url: https://github.com/schultek
-  - name: X/Twitter
-    url: https://twitter.com/schultek_dev
-  - name: Bluesky
-    url: https://bsky.app/profile/schultek.dev
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/athiele/
+  - name: Email
+    url: mailto:alex@thiele.dev

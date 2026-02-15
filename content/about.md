@@ -1,25 +1,39 @@
 ---
 title: About Me
-description: Learn more about Alex and this blog.
+description: Alexander Thiele is a seasoned technology leader and a Flutter developer by heart.
 ---
 
-# About Me
+# About
 
-Hi! I'm Alex, a software engineer passionate about Dart, web development, and building efficient systems.
+Alexander Thiele is a seasoned technology leader and a Flutter developer by heart with more than 10 years experience in mobile development.
 
-This blog is a place where I document my learnings and share interesting things I've found.
+## Short Biography
 
-## Contact & Socials
+Alexander Thiele is a seasoned technology leader and developer with more than 10 years experience in tech including being a developer, tech lead, freelancer, CTO and more.
 
-I'm active on these platforms:
+## Where do you live?
 
-{{#site.social}}
-- [{{name}}]({{url}})
-{{/site.social}}
+I live in **Munich, Germany** and previously spent several years in Berlin working in various startups and even founded my own startup.
 
-## About This Site
+## Where have you worked as a technology leader?
 
-This site is built using:
-- [Jaspr](https://jaspr.site) - The Dart web framework.
-- [jaspr_content](https://pub.dev/packages/jaspr_content) - For rendering Markdown.
-- [GitHub Pages](https://pages.github.com/) - (or whatever hosting I use).
+When I was still a Senior Android Engineer at Doodle, I got the chance to make my first experiences as an engineering manager in 2017. In the beginning, the Berlin team started with 4 employees and grew to over 30 after a few years. I created a friendly company & engineering culture and was also a prokurist for Doodle Germany and managed legal, contracts, accounting, and payroll for the entire team in Germany.
+
+In 2019, I joined a startup as the CTO (Chief Technology Officer) in Berlin. Prosperity was a FinTech & Digital Insurance Startup (Private Pension Management). I established an entirely new engineering team, created the technical roadmap and cleared all roadblocks. We were re-thinking the digital insurances with a scalable Backend, a shiny Frontend & stable Native Apps. The backend service managed around 400 million CHF in assets in the countries Switzerland, Liechtenstein, Germany, Austria, France, and Italy. Growing the team from 2 to 13. I was also a Managing Director and managed legal, contracts, accounting, and payroll in close cooperation with the team in Liechtenstein.
+
+## You also founded a startup, right?
+
+Yes, in 2020 i founded LinkFive, moved to Munich and built the whole tech B2B SaaS myself. LinkFive is the Flutter In-App- Purchase Management service with a self developed Flutter plugin. Scaling multiple backends on gcloud cloud run with kotlin ktor, service communication with PubSub, API frontend with Vue.js, Flutter Plugins / Android SDK for Apps and landing page and developer documentation with gatsby.
+
+I have learned a lot and I am glad that I have taken the step to found a company.
+
+## Why do you like Flutter?
+
+Throughout my career I've used and tested quite a few frameworks. I started with native development and tested phonegap, react native and Flutter right after it was released.
+
+With Flutter, the developer experience was by far the best. The development was just extremely fun and the community is just great. There are really a lot of plugins that developers put up for free on github and pub.dev.
+
+## Get in Contact
+
+* Ideally we just connect on [LinkedIn](https://www.linkedin.com/in/athiele/)
+* or write me an email to [alex@thiele.dev](mailto:alex@thiele.dev)
