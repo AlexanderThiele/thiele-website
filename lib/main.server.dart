@@ -58,7 +58,10 @@ void main() {
         ),
         CustomComponent(
           pattern: 'Hero',
-          builder: (_, _, _) => Hero(),
+          builder: (name, attrs, child) => Hero(
+            title: attrs['title'],
+            content: attrs['content'],
+          ),
         ),
         CustomComponent(
           pattern: 'BlogGrid',

@@ -2,7 +2,10 @@ import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 
 class Hero extends StatelessComponent {
-  const Hero({super.key});
+  final String? title;
+  final String? content;
+
+  const Hero({this.title, this.content, super.key});
 
   @override
   Component build(BuildContext context) {
@@ -13,8 +16,8 @@ class Hero extends StatelessComponent {
           img(classes: 'hero-image', src: '/images/hero.png', alt: 'Alexander Thiele'),
         ]),
         div(classes: 'hero-details', [
-          h1(classes: 'hero-title', [.text('Alexander Thiele')]),
-          p(classes: 'hero-content', [.text('Techi 👨‍💻 Startup Enthusiast, Entrepreneur, Co-Founder. Creating Company & Engineering Culture & Flutter fan 🤓')]),
+          h1(classes: 'hero-title', [.text(title ?? 'Alexander Thiele')]),
+          p(classes: 'hero-content', [.text(content ?? 'Techi 👨‍💻 Startup Enthusiast, Entrepreneur, Co-Founder. Creating Company & Engineering Culture & Flutter fan 🤓')]),
         ]),
       ],
     );

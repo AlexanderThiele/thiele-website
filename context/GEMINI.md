@@ -9,3 +9,5 @@
 | 2026-02-15 | Decision | Refactored App Layout | [decision-refactor-blog-layout.md](decision-refactor-blog-layout.md) |
 | 2026-02-15 | Preference | Avoid Hide Imports | [preference-avoid-hide-imports.md](preference-avoid-hide-imports.md) |
 | 2026-02-15 | Learning | Fix All Lint Issues | [learning-fix-all-lints.md](learning-fix-all-lints.md) |
+| 2026-02-15 | Learning | CustomComponent Builder | [learning-jaspr-custom-component-builder.md](learning-jaspr-custom-component-builder.md) |
+| 2026-02-15 | Decision | Dynamic Hero Component | [decision-refactor-hero-component.md](decision-refactor-hero-component.md) |
