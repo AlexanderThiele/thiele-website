@@ -2,12 +2,6 @@
 
 A documentation site built with Jaspr
 
-## Running the project
-
-Run your project using `jaspr serve`.
-
-The development server will be available on `http://localhost:8080`.
-
 ## Building the project
 
 Build your project using `jaspr build`.

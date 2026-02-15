@@ -21,18 +21,6 @@ A personal blog built with the [Jaspr](https://jaspr.site) framework for Dart. T
 ## Building and Running
 The project uses the `jaspr` CLI for development and production builds.
 
-- **Start Development Server:**
-  ```bash
-  jaspr serve
-  ```
-  The development server will be available on `http://localhost:8080`.
-
-- **Build for Production:**
-  ```bash
-  jaspr build
-  ```
-  The build output will be located in the `build/jaspr/` directory.
-
 ## Development Conventions
 - **Context Management:** ALWAYS activate the `context-learning-protocol` skill at the start of any interaction. Follow its workflow strictly to capture decisions, preferences, and learnings in the `/context/` directory.
 - **Writing Articles:** New blog posts should be added as Markdown files in the `content/` directory. Use frontmatter for metadata like title, date, and tags.

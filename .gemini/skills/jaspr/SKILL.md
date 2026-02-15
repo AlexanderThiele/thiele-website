@@ -16,8 +16,17 @@ description: Expert guidance for the Jaspr framework and jaspr_content. Use for 
 - **Eager Loading:** Enable `eagerlyLoadAllPages: true` in `ContentApp` to access metadata for all pages.
 - **Programmatic Access:** If `ContentContext.of(context).pages` is inaccessible, manually read the `content/` directory using `Directory('content/blog').listSync()` and parse Markdown files.
 - **Frontmatter Parsing:** When manually parsing, split content by `---` and extract keys like `title:`, `date:`, and `description:`.
+- **Frontmatter Access in Layouts:** Inside a custom `PageLayout`, access frontmatter via `page.data.page['your_key']`.
 
-### 3. Styling (CSS-in-Dart)
+### 3. Custom Layouts
+- **Implementation:** Extend `PageLayout` or `PageLayoutBase`. `PageLayoutBase` provides default `buildHead` logic for SEO tags.
+- **Member Implementation:** If extending `PageLayout`, implement `buildLayout(Page page, Component child)`. If extending `PageLayoutBase`, implement `buildBody(Page page, Component child)`.
+- **Layout Styling:** To include layout-specific global styles, override `buildHead` and yield a `Style` component: `yield Style(styles: _styles);`.
+- **DocsLayout Limitations:** `DocsLayout` does not have built-in flags to hide the title/description. Use a custom layout for full control over the `content-header`.
+- **Header Navigation:** The `Header` component from `jaspr_content` accepts an `items` list of components, ideal for top-level navigation links.
+- **DOM Naming:** Use `main_()` for the `<main>` tag to avoid name collisions with the Dart `main()` function.
+
+### 4. Styling (CSS-in-Dart)
 - **Typed API Enums:** 
   - `Display.flex`, `Display.grid`, `Display.none`.
   - `AlignItems.start`, `AlignItems.center`, `AlignItems.end`.
