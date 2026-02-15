@@ -21,4 +21,4 @@ description: Expert guidance for Dart development. Use for core language feature
 
 ## Mandatory Verification Workflow
 AFTER making code changes and BEFORE considering a task complete, you MUST:
-1. **Analyze:** Run `dart analyze` and fix ALL reported errors and warnings.
+1. **Analyze:** Run `dart analyze` and fix ALL reported errors, warnings, and info messages (including deprecations).

@@ -74,7 +74,7 @@ class Hero extends StatelessComponent {
       width: 85.percent,
       position: Position.absolute(),
       raw: {
-        'background': 'white',
+        'background': 'var(--background)',
         'bottom': '0',
         'left': '0',
       },

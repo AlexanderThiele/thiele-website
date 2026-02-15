@@ -10,7 +10,6 @@ import 'package:jaspr/server.dart';
 import 'package:jaspr_content/components/callout.dart';
 import 'package:jaspr_content/components/header.dart';
 import 'package:jaspr_content/components/image.dart';
-import 'package:jaspr_content/components/sidebar.dart';
 import 'package:jaspr_content/components/theme_toggle.dart';
 import 'package:jaspr_content/jaspr_content.dart';
 import 'package:jaspr_content/theme.dart';
@@ -22,7 +21,7 @@ import 'components/hero.dart';
 // This file is generated automatically by Jaspr, do not remove or edit.
 import 'main.server.options.dart';
 
-import 'package:jaspr/dom.dart' hide Header;
+import 'package:jaspr/dom.dart';
 
 class BlogLayout extends PageLayoutBase {
   final Header? header;
@@ -201,9 +200,9 @@ void main() {
             logo: '/images/logo.svg',
             leading: [],
             items: [
-              a(classes: 'header-link', href: '/', [text('Home')]),
-              a(classes: 'header-link', href: '/blog', [text('Blog')]),
-              a(classes: 'header-link', href: '/about', [text('About')]),
+              a(classes: 'header-link', href: '/', [Component.text('Home')]),
+              a(classes: 'header-link', href: '/blog', [Component.text('Blog')]),
+              a(classes: 'header-link', href: '/about', [Component.text('About')]),
               ThemeToggle(),
             ],
           ),
