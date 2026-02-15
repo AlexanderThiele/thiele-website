@@ -38,6 +38,17 @@ class Hero extends StatelessComponent {
         'max-height': '560px',
       },
     ),
+    css.media(MediaQuery.all(minWidth: 1024.px), [
+      css('.hero-image-container').styles(
+        margin: .only(left: .auto),
+        width: 85.percent,
+      ),
+      css('.hero-details').styles(
+        raw: {
+          'left': '2.5rem',
+        },
+      ),
+    ]),
     css('.hero-image-container::after').styles(
       raw: {
         'content': '""',
@@ -52,6 +63,7 @@ class Hero extends StatelessComponent {
     css('.hero-image').styles(
       width: 100.percent,
       height: 100.percent,
+      margin: Margin.zero,
       raw: {
         'object-fit': 'cover',
       },
