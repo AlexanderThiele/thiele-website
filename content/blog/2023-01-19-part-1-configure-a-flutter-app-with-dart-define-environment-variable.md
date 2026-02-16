@@ -1,6 +1,7 @@
 ---
 title: "Configure a Flutter App with dart-define environment variable Part 1: HOST_URL"
 date: 2023-01-19
+slug: part-1-configure-a-flutter-app-with-dart-define-environment-variable
 ---
 
 

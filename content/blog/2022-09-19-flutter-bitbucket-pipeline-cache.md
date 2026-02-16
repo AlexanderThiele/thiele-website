@@ -2,6 +2,7 @@
 title: "Flutter Bitbucket Pipeline cache"
 description: Speed up your Bitbucket pipeline by caching Flutter dependencies.
 date: 2022-09-19
+slug: flutter-bitbucket-pipeline-cache
 tags: ["flutter", "bitbucket", "ci-cd"]
 ---
 

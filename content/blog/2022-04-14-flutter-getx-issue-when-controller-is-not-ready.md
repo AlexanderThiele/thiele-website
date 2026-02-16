@@ -1,6 +1,7 @@
 ---
 title: "Flutter GetX Issue when controller is not ready"
 date: 2022-04-14
+slug: flutter-getx-issue-when-controller-is-not-ready
 ---
 
 

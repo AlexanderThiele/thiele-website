@@ -1,6 +1,7 @@
 ---
 title: "Usage Numbers for Stift: Calendar App for iPads"
 date: 2024-04-04
+slug: usage-numbers-for-stift-calendar-app-for-ipads
 ---
 
 

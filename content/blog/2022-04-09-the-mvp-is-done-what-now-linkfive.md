@@ -1,6 +1,7 @@
 ---
 title: "The MVP is done. What now? | LinkFive"
 date: 2022-04-09
+slug: the-mvp-is-done-what-now-linkfive
 ---
 
 

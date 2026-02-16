@@ -1,6 +1,7 @@
 ---
 title: "The Power of the late keyword in Dart"
 date: 2023-10-10
+slug: the-power-of-late-keyword-in-dart
 ---
 
 

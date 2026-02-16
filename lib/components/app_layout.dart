@@ -38,7 +38,8 @@ class AppLayout extends PageLayoutBase {
       } else if (path == '/about') {
         image = '/images/hero/about.png';
       } else if (path.startsWith('/blog/')) {
-        var name = path.substring(6);
+        var slug = page.data.page['slug'] as String?;
+        var name = slug ?? path.substring(6);
         if (name.isNotEmpty) {
           image = '/images/hero/$name.png';
         }

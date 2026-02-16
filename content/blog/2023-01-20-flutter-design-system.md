@@ -1,6 +1,7 @@
 ---
 title: "Flutter Design System"
 date: 2023-01-20
+slug: flutter-design-system
 ---
 
 

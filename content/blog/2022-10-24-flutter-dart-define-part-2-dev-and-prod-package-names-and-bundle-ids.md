@@ -1,6 +1,7 @@
 ---
 title: "Flutter dart-define Part 2: Dev and Prod Package Names & Bundle IDs"
 date: 2022-10-24
+slug: flutter-dart-define-part-2-dev-and-prod-package-names-and-bundle-ids
 ---
 
 

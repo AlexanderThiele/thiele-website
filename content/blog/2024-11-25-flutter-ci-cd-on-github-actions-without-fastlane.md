@@ -2,6 +2,7 @@
 title: "Flutter CI/CD on Github actions without fastlane"
 description: You don't need fastlane for a flutter release. Just use the command flutter release ipa to build and release your Flutter app.
 date: 2024-11-25
+slug: flutter-ci-cd-on-github-actions-without-fastlane
 tags: ["flutter", "github-actions", "ci-cd"]
 ---
 

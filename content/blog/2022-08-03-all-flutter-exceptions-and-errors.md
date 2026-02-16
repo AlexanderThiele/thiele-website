@@ -2,6 +2,7 @@
 title: "All Flutter Exceptions & Errors"
 description: The difference between using either an exception or an error is the type of error.
 date: 2022-08-03
+slug: all-flutter-exceptions-and-errors
 tags: ["flutter", "dart"]
 ---
 

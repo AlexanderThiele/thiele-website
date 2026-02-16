@@ -1,6 +1,7 @@
 ---
 title: "Flutter Tablet App that detects Stylus (Apple Pencil, Samsung Pen) & the Limits of Riverpod (Open Source App)"
 date: 2023-01-11
+slug: flutter-tablet-app-that-detects-stylus-apple-pencil-samsung-pen-open-source-app
 ---
 
 

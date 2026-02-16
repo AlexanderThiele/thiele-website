@@ -66,6 +66,7 @@ class BlogGrid extends StatelessComponent {
     String title = '';
     String date = '';
     String description = '';
+    String? slug;
     List<String> tags = [];
     String? image;
 
@@ -80,6 +81,8 @@ class BlogGrid extends StatelessComponent {
             date = line.substring(5).trim();
           } else if (line.startsWith('description:')) {
             description = line.substring(12).trim();
+          } else if (line.startsWith('slug:')) {
+            slug = line.substring(5).trim();
           } else if (line.startsWith('tags:')) {
             // Simple tag parsing for ["a", "b"] or [a, b]
             final tagsStr = line.substring(5).trim();
@@ -102,7 +105,7 @@ class BlogGrid extends StatelessComponent {
       title = file.path.split('/').last.replaceAll('.md', '');
     }
 
-    final url = '/blog/${file.path.split('/').last.replaceAll('.md', '')}';
+    final url = '/blog/${slug ?? file.path.split('/').last.replaceAll('.md', '')}';
 
     return _PostData(title, date, description, tags, image, url);
   }

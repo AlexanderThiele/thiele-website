@@ -17,6 +17,7 @@ description: Expert guidance for the Jaspr framework and jaspr_content. Use for 
 - **Programmatic Access:** If `ContentContext.of(context).pages` is inaccessible, manually read the `content/` directory using `Directory('content/blog').listSync()` and parse Markdown files.
 - **Frontmatter Parsing:** When manually parsing, split content by `---` and extract keys like `title:`, `date:`, and `description:`.
 - **Frontmatter Access in Layouts:** Inside a custom `PageLayout`, access frontmatter via `page.data.page['your_key']`.
+- **Custom Slugs/Routing:** To decouple filenames from URL paths (e.g., `2024-01-01-post.md` -> `/blog/post`), use `ContentApp.custom` and provide a `routerBuilder`. Inside `routerBuilder`, iterate through the generated routes and return a new `Route` with the desired path by reading the file's frontmatter.
 
 ### 3. Custom Layouts
 - **Implementation:** Extend `PageLayout` or `PageLayoutBase`. `PageLayoutBase` provides default `buildHead` logic for SEO tags.

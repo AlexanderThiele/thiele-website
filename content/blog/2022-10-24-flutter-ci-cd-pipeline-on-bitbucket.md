@@ -2,6 +2,7 @@
 title: "Flutter CI/CD Pipeline on Bitbucket"
 description: A look at CI/CD with Flutter on Bitbucket and developing a testing pipeline.
 date: 2022-10-24
+slug: flutter-ci-cd-pipeline-on-bitbucket
 tags: ["flutter", "bitbucket", "ci-cd"]
 ---
 

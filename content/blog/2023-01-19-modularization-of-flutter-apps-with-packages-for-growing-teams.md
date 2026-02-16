@@ -1,6 +1,7 @@
 ---
 title: "Modularization of Flutter Apps with Packages for Growing Teams"
 date: 2023-01-19
+slug: modularization-of-flutter-apps-with-packages-for-growing-teams
 ---
 
 
