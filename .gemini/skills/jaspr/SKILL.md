@@ -43,6 +43,11 @@ description: Expert guidance for the Jaspr framework and jaspr_content. Use for 
 
 ## Workflows
 
+### Searching Documentation
+1. ALWAYS use the `context7` MCP server as the primary source for documentation, code examples, and API references for Jaspr and related libraries.
+2. Call `resolve-library-id` with `jaspr` to get the correct library ID (e.g., `/schultek/jaspr`).
+3. Use `query-docs` with the resolved library ID to find specific information before attempting to write code or solve complex framework-specific issues.
+
 ### Creating a Blog Overview
 1. Create a component that uses `dart:io` to list `.md` files in `content/blog/`.
 2. Parse the frontmatter of each file to extract `title`, `date`, and `description`.

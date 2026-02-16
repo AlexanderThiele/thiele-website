@@ -5,12 +5,11 @@
   },
   "mcpServers": {
     "context7": {
-      "command": "npx -y @context7/mcp-server",
-      "args": [],
-      "env": {
-        "CONTEXT7_API_KEY": "ctx7sk-051fe3fd-e5ec-4193-be1b-ec58e9a84615"
-      },
-      "description": "Context7 documentation and code examples"
+      "httpUrl": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-051fe3fd-e5ec-4193-be1b-ec58e9a84615",
+        "Accept": "application/json, text/event-stream"
+      }
     }
   }
 }
