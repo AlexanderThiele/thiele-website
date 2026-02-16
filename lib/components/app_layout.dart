@@ -90,7 +90,7 @@ class AppLayout extends PageLayoutBase {
                 css('.content-container', [
                   css('&').styles(
                     flex: Flex(grow: 1, shrink: 1, basis: 0.percent),
-                    maxWidth: 80.rem,
+                    maxWidth: 64.rem,
                     minWidth: Unit.zero,
                     padding: Padding.only(right: Unit.zero),
                   ),

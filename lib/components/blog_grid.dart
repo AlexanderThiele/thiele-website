@@ -110,7 +110,7 @@ class BlogGrid extends StatelessComponent {
   @css
   static List<StyleRule> get styles => [
     css('.blog-grid').styles(
-      maxWidth: 80.rem,
+      maxWidth: 64.rem,
       margin: .symmetric(horizontal: .auto, vertical: 2.rem),
       padding: .symmetric(horizontal: 2.rem),
     ),

@@ -27,7 +27,7 @@ class Hero extends StatelessComponent {
   static List<StyleRule> get styles => [
     css('.hero').styles(
       display: Display.flex,
-      maxWidth: 80.rem,
+      maxWidth: 64.rem,
       margin: .symmetric(horizontal: .auto),
       minHeight: 200.px,
       position: Position.relative(),
