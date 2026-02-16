@@ -52,6 +52,16 @@ description: Expert guidance for the Jaspr framework and jaspr_content. Use for 
 AFTER making code changes and BEFORE considering a task complete, you MUST:
 1. **Build:** Run `jaspr build` and verify successful completion.
 
+### No-Shortcut Policy
+- **Never skip the build:** Even for "trivial" or "safe" changes (like paths, text, or CSS), a build is required to ensure no regressions or syntax errors were introduced.
+- **Final Tool Call:** The last tool call in any turn that modifies the codebase or assets MUST be `jaspr build` (or a command that includes it).
+
+### Pre-Response Check
+Before sending a text response to the user after a modification:
+- "Did I run `jaspr build` in this turn?"
+- If NO, run it now.
+- If YES but it failed, resolve the error.
+
 ## Common Issues
 - **highlighter crash:** `CodeBlock()` from `jaspr_content` may throw "Null check operator used on a null value" due to complex language hints or missing theme colors. Disable it in `lib/main.server.dart` if it blocks the build.
 - **OptionsSkew:** If `jaspr build` fails with `OptionsSkew`, run `pkill -f dart && pkill -f jaspr` and try again.

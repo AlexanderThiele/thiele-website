@@ -3,7 +3,6 @@ title: "The Power of the late keyword in Dart"
 date: 2023-10-10
 ---
 
-# The Power of the late keyword in Dart
 
 One of the most underused keywords in Dart is `late`. I would even call
 it a hidden champion, because you can do so much more than assign a

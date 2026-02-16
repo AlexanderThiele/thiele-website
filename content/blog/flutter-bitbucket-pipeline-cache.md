@@ -5,7 +5,6 @@ date: 2022-09-19
 tags: ["flutter", "bitbucket", "ci-cd"]
 ---
 
-# Flutter Bitbucket Pipeline cache
 
 It was pretty tricky to speed up the pipeline since there are not so many resources on how to cache your flutter app on Bitbucket Pipeline.
 

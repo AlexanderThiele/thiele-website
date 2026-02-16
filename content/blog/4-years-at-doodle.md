@@ -5,7 +5,6 @@ date: 2022-04-09
 tags: ["Flutter", "Doodle", "Career"]
 ---
 
-# 4 Years at Doodle
 
 My journey continues.
 

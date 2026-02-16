@@ -3,7 +3,6 @@ title: "Flutter Design System"
 date: 2023-01-20
 ---
 
-# Flutter Design System
 
 Many may even know the term "design system". The idea behind the design
 system is that all components should look the same and that changes have

@@ -3,7 +3,6 @@ title: "Modularization of Flutter Apps with Packages for Growing Teams"
 date: 2023-01-19
 ---
 
-# Modularization of Flutter Apps with Packages for Growing Teams
 
 Modularizing the app with packages is a good way to make the code more
 maintainable and get the code ready for a growing team.

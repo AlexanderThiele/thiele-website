@@ -5,7 +5,6 @@ date: 2024-11-25
 tags: ["flutter", "github-actions", "ci-cd"]
 ---
 
-# Flutter CI/CD on Github actions without fastlane
 
 You don't need fastlane for a flutter release. Just use the command `flutter build ipa` to build and release your Flutter app to the apple app store or google play store. How? It is actually very simple. There are just a few steps you need to consider:
 

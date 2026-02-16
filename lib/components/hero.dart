@@ -4,8 +4,9 @@ import 'package:jaspr/jaspr.dart';
 class Hero extends StatelessComponent {
   final String? title;
   final String? content;
+  final String? image;
 
-  const Hero({this.title, this.content, super.key});
+  const Hero({this.title, this.content, this.image, super.key});
 
   @override
   Component build(BuildContext context) {
@@ -13,7 +14,7 @@ class Hero extends StatelessComponent {
       classes: 'hero',
       [
         div(classes: 'hero-image-container', [
-          img(classes: 'hero-image', src: '/images/hero.png', alt: 'Alexander Thiele'),
+          img(classes: 'hero-image', src: image ?? '/images/hero.png', alt: 'Alexander Thiele'),
         ]),
         div(classes: 'hero-details', [
           h1(classes: 'hero-title', [.text(title ?? 'Alexander Thiele')]),
@@ -27,7 +28,7 @@ class Hero extends StatelessComponent {
   static List<StyleRule> get styles => [
     css('.hero').styles(
       display: Display.flex,
-      maxWidth: 64.rem,
+      maxWidth: 80.rem,
       margin: .symmetric(horizontal: .auto),
       minHeight: 200.px,
       position: Position.relative(),
@@ -85,7 +86,9 @@ class Hero extends StatelessComponent {
     css('.hero-title').styles(
       fontSize: 3.rem,
       fontWeight: FontWeight.w800,
-      margin: .only(bottom: 1.rem),
+      letterSpacing: (-0.012).em,
+      margin: .only(bottom: 1.25.rem),
+      raw: {'line-height': '1.1'},
     ),
     css('.hero-content').styles(
       fontSize: 1.5.rem,

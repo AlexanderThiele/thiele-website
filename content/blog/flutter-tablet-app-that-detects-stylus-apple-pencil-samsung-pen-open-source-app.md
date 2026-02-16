@@ -3,7 +3,6 @@ title: "Flutter Tablet App that detects Stylus (Apple Pencil, Samsung Pen) & the
 date: 2023-01-11
 ---
 
-# Flutter Tablet App that detects Stylus (Apple Pencil, Samsung Pen) & the Limits of Riverpod (Open Source App)
 
 I recently got a tablet including a pen, and I was looking for a
 calendar App where you can draw, no typing. No Luck.

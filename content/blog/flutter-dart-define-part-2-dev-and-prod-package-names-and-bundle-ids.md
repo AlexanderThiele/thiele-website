@@ -3,7 +3,6 @@ title: "Flutter dart-define Part 2: Dev and Prod Package Names & Bundle IDs"
 date: 2022-10-24
 ---
 
-# Flutter dart-define Part 2: Dev and Prod Package Names & Bundle IDs
 
 The [first
 part](https://thiele.dev/blog/part-1-configure-a-flutter-app-with-dart-define-environment-variable)

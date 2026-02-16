@@ -5,7 +5,6 @@ date: 2022-10-24
 tags: ["flutter", "bitbucket", "ci-cd"]
 ---
 
-# Flutter CI/CD Pipeline on Bitbucket
 
 Flutter is becoming more and more popular and therefore more and more companies are using Flutter. In this post we take a look at CI/CD with Flutter on Bitbucket and develop a testing pipeline that is executed on every pull request or release.
 

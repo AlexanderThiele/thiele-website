@@ -3,7 +3,6 @@ title: "The MVP is done. What now? | LinkFive"
 date: 2022-04-09
 ---
 
-# The MVP is done. What now? | LinkFive
 
 The development of LinkFive is finished for now. And now? The big
 question of questions has come!

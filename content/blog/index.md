@@ -3,9 +3,8 @@ title: Blog
 description: All blog posts by Alexander Thiele
 ---
 
-# Blog
-
-Welcome to my blog! Here you can find all my articles about Flutter, Dart, and Software Engineering.
+Welcome to my blog!
+ Here you can find all my articles about Flutter, Dart, and Software Engineering.
 
 ## All Posts
 

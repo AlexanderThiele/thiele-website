@@ -3,7 +3,6 @@ title: "Should you use Github-Flow for app development?"
 date: 2022-04-13
 ---
 
-# Should you use Github-Flow for app development?
 
 While working in a new project, the team wants to use github-flow
 instead of any other git workflow system.

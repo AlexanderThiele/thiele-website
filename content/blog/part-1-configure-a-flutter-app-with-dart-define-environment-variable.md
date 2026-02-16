@@ -3,7 +3,6 @@ title: "Configure a Flutter App with dart-define environment variable Part 1: HO
 date: 2023-01-19
 ---
 
-# Configure a Flutter App with dart-define environment variable Part 1: HOST_URL
 
 Different app environments, different ways to reach them.
 

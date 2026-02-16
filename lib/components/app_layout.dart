@@ -4,28 +4,55 @@ import 'package:jaspr_content/components/header.dart';
 import 'package:jaspr_content/jaspr_content.dart';
 import 'package:jaspr_content/theme.dart';
 
+import 'hero.dart';
+
 class AppLayout extends PageLayoutBase {
   final Header? header;
 
   AppLayout({this.header});
 
   @override
-  String get name => 'blog';
+  Pattern get name => RegExp('.*');
 
   @override
   Iterable<Component> buildHead(Page page) sync* {
     yield* super.buildHead(page);
-    yield Style(styles: _styles);
+    yield Style(styles: [..._styles, ...Hero.styles]);
   }
 
   @override
   Component buildBody(Page page, Component child) {
+    var image = page.data.page['image'] as String?;
+    if (image == null) {
+      var path = page.path;
+      if (!path.startsWith('/')) path = '/$path';
+      if (path.length > 1 && path.endsWith('/')) {
+        path = path.substring(0, path.length - 1);
+      }
+      if (path.endsWith('.md')) {
+        path = path.substring(0, path.length - 3);
+      }
+
+      if (path == '/') {
+        image = '/images/hero/index.png';
+      } else if (path == '/about') {
+        image = '/images/hero/about.png';
+      } else if (path.startsWith('/blog/')) {
+        var name = path.substring(6);
+        if (name.isNotEmpty) {
+          image = '/images/hero/$name.png';
+        }
+      }
+    }
+
     return div(
       classes: 'docs',
       [
         if (header != null)
           div(classes: 'header-container', [
-            header!,
+            div(classes: 'header-content', [
+              header!,
+            ]),
           ]),
         div(
           classes: 'main-container',
@@ -36,12 +63,10 @@ class AppLayout extends PageLayoutBase {
                   classes: 'content-container',
                   [
                     if (page.data.page['hideTitle'] != true)
-                      div(
-                        classes: 'content-header',
-                        [
-                          h1([.text(page.data.page['title'] as String? ?? '')]),
-                          if (page.data.page['description'] != null) p([.text(page.data.page['description'] as String)]),
-                        ],
+                      Hero(
+                        title: page.data.page['title'] as String?,
+                        content: page.data.page['description'] as String?,
+                        image: image,
                       ),
                     div(
                       classes: 'content-body',
@@ -67,6 +92,10 @@ class AppLayout extends PageLayoutBase {
               zIndex: ZIndex(10),
               raw: {'backdrop-filter': 'blur(8px)'},
             ),
+            css('.header-content').styles(
+              maxWidth: 80.rem,
+              margin: Margin.symmetric(horizontal: Unit.auto),
+            ),
           ]),
           css('.main-container', [
             css('&').styles(
@@ -90,11 +119,11 @@ class AppLayout extends PageLayoutBase {
                 css('.content-container', [
                   css('&').styles(
                     flex: Flex(grow: 1, shrink: 1, basis: 0.percent),
-                    maxWidth: 64.rem,
+                    maxWidth: 80.rem,
                     minWidth: Unit.zero,
                     padding: Padding.only(right: Unit.zero),
                   ),
-                  css.media(MediaQuery.all(minWidth: 1280.px), [css('&').styles(padding: Padding.only(right: 3.rem))]),
+                  css.media(MediaQuery.all(minWidth: 80.rem), [css('&').styles(padding: Padding.only(right: 3.rem))]),
                   css('.content-header', [
                     css('&').styles(
                       color: ContentColors.headings,
@@ -107,6 +136,10 @@ class AppLayout extends PageLayoutBase {
                       margin: Margin.only(top: .75.rem),
                     ),
                   ]),
+                  css('.content-body').styles(
+                    maxWidth: 64.rem,
+                    margin: Margin.symmetric(horizontal: Unit.auto),
+                  ),
                 ]),
               ]),
             ]),

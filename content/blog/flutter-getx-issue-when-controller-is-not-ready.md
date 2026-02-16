@@ -3,7 +3,6 @@ title: "Flutter GetX Issue when controller is not ready"
 date: 2022-04-14
 ---
 
-# Flutter GetX Issue when controller is not ready
 
 The state management system of GetX for flutter is widely used but we
 had one issue all the time (or lets call it some struggleing).

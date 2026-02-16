@@ -61,6 +61,7 @@ void main() {
           builder: (name, attrs, child) => Hero(
             title: attrs['title'],
             content: attrs['content'],
+            image: attrs['image'],
           ),
         ),
         CustomComponent(

@@ -3,7 +3,6 @@ title: "Usage Numbers for Stift: Calendar App for iPads"
 date: 2024-04-04
 ---
 
-# Usage Numbers for Stift: Calendar App for iPads
 
 Started as a small calendar app that I use myself as a family calendar,
 it is developing more and more into a surprisingly well-received app in

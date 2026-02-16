@@ -5,7 +5,6 @@ date: 2022-08-03
 tags: ["flutter", "dart"]
 ---
 
-# All Flutter Exceptions & Errors
 
 The difference between using either an exception or an error is the type of error. An exception is an error thrown by the user when something is not working properly and you want to send information between the call stack. An error is a non-expected error that should have been fixed before.
 

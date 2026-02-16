@@ -1,10 +1,7 @@
 ---
 title: About
 description: Alexander Thiele is a seasoned technology leader and a Flutter developer by heart with more than 10 years experience in mobile development.
-hideTitle: true
 ---
-
-<Hero title="About" content="Alexander Thiele is a seasoned technology leader and a Flutter developer by heart with more than 10 years experience in mobile development." />
 
 ## Short Biography
 
