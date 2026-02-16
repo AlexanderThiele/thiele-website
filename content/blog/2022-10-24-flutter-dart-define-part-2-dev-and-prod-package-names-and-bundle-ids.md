@@ -170,11 +170,11 @@ Now, set the App name by opening the `Info.plist` located in `ios/Runner/Info.pl
 
 The only thing missing is to overwrite the default parameters. For this we open the iOS project with Xcode and create a new pre-build action scheme. 
 
-![xcode pre build action scheme 1](//images.ctfassets.net/z94tijvlkhs1/3bul4iH4j7z7V5b6EN9XfZ/a08ab89779c4902c60ad68743c3c8295/Screenshot_2022-10-21_at_13.47.22.png)
+![xcode pre build action scheme 1](/images/blog/flutter-dart-define-part-2-dev-and-prod-package-names-and-bundle-ids/xcode-pre-build-action-scheme-1.png)
 
 From there you can press Build > Pre-action and the following window will appear
 
-![xcode pre build action scheme 2](//images.ctfassets.net/z94tijvlkhs1/1vDAsyYZCUz7wvdi45mHDD/c7d06b4cb1b033ad2bdef932fed7053a/Screenshot_2022-10-21_at_13.49.36.png)
+![xcode pre build action scheme 2](/images/blog/flutter-dart-define-part-2-dev-and-prod-package-names-and-bundle-ids/xcode-pre-build-action-scheme-2.png)
 
 The pre-action is a script that is executed before each build process. In this step we overwrite the default values. The script will look like this:
 

@@ -94,9 +94,9 @@ The bitbucket cache will refreshed after a week. You can also delete the cache m
 ## Flutter dependency update
 It also does not cause any problems if you change your dependencies before the cache has expired. The only thing that happens is that the command flutter pub get takes a little longer because additional dependencies are downloaded.
 
-![Flutter bitbucket pipeline lint test cache](//images.ctfassets.net/z94tijvlkhs1/5N8ijMcEXp6G55o9hXy8gL/e871317492737f5092e40b05733f067a/carbon.png)
+![Flutter bitbucket pipeline lint test cache](/images/blog/flutter-bitbucket-pipeline-cache/flutter-bitbucket-pipeline-lint-test-cache.png)
 
-![Flutter pipeline pull request ](//images.ctfassets.net/z94tijvlkhs1/4CnFXQFw0ByQUYNa6OK4NJ/5d19d3de18984d9afdd92a3fa3f0b202/carbon__3_.png)
+![Flutter pipeline pull request ](/images/blog/flutter-bitbucket-pipeline-cache/flutter-pipeline-pull-request.png)
 
 Best,
 Alex
