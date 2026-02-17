@@ -21,7 +21,7 @@ jobs:
       - name: Install Jaspr CLI
         run: dart pub global activate jaspr_cli
       - name: Build site
-        run: dart pub global run jaspr_cli build
+        run: dart pub global run jaspr_cli:jaspr build
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
