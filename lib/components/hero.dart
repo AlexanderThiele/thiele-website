@@ -29,7 +29,7 @@ class Hero extends StatelessComponent {
     css('.hero').styles(
       display: Display.flex,
       maxWidth: 80.rem,
-      margin: .symmetric(horizontal: .auto),
+      margin: .only(left: .auto, right: .auto, bottom: 4.rem),
       minHeight: 200.px,
       position: Position.relative(),
       raw: {'align-items': 'flex-end'},

@@ -45,16 +45,28 @@ description: Expert guidance for the Jaspr framework and jaspr_content. Use for 
 
 ### Searching Documentation
 1. ALWAYS use the `context7` MCP server as the primary source for documentation, code examples, and API references for Jaspr and related libraries.
-2. Call `resolve-library-id` with `jaspr` to get the correct library ID (e.g., `/schultek/jaspr`).
-3. Use `query-docs` with the resolved library ID to find specific information before attempting to write code or solve complex framework-specific issues.
+2. Call `resolve-library-id` with `jaspr` to get the correct library ID: `/schultek/jaspr`. **Note:** This ID also contains documentation for sub-packages like `jaspr_content`, `jaspr_router`, etc.
+3. Use `query-docs` with `/schultek/jaspr` to find specific information before attempting to write code or solve complex framework-specific issues.
 
 ### Creating a Blog Overview
-1. Create a component that uses `dart:io` to list `.md` files in `content/blog/`.
-2. Parse the frontmatter of each file to extract `title`, `date`, and `description`.
-3. Render using a `ul` with `Display.grid` and `auto-fit` for responsiveness.
-4. Sort posts by `date` descending.
+1. Create a component that accesses all loaded pages using `context.pages` (requires `eagerlyLoadAllPages: true` in `ContentApp`).
+2. Filter pages by path (e.g., `page.path.startsWith('blog/')`) and ensure they aren't index pages.
+3. Access frontmatter data via `page.data.page['key']` (e.g., `title`, `description`, `date`).
+4. Sort posts by `date` (parsed from frontmatter) descending.
+5. Render using a `ul` with `Display.grid` and `auto-fit` for responsiveness.
 
-## Mandatory Verification Workflow
+### Registering Custom Components
+Use `CustomComponent` in `ContentApp` to enable custom tags in Markdown:
+```dart
+CustomComponent(
+  pattern: 'MyComponent',
+  builder: (name, attributes, child) => MyComponent(
+    title: attributes['title'],
+    children: [if (child != null) child],
+  ),
+)
+```
+
 AFTER making code changes and BEFORE considering a task complete, you MUST:
 1. **Build:** Run `jaspr build` and verify successful completion.
 

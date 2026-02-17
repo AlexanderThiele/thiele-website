@@ -22,4 +22,7 @@
 | 2026-02-17 | Learning | Image Manipulation with sips | [learning-sips-image-manipulation.md](learning-sips-image-manipulation.md) |
 | 2026-02-17 | Learning | Jaspr link() sizes attribute | [learning-jaspr-link-sizes.md](learning-jaspr-link-sizes.md) |
 | 2026-02-17 | Preference | Blog Grid Image Margin | [preference-blog-grid-image-margin.md](preference-blog-grid-image-margin.md) |
+| 2026-02-17 | Decision | Recreated About Page | [decision-recreated-about-page.md](decision-recreated-about-page.md) |
+| 2026-02-17 | Learning | Context7 mapping for jaspr_content | [learning-jaspr-content7-mapping.md](learning-jaspr-content7-mapping.md) |
+| 2026-02-17 | Decision | GitHub Workflow for Netlify | [decision-github-netlify-workflow.md](decision-github-netlify-workflow.md) |
 
