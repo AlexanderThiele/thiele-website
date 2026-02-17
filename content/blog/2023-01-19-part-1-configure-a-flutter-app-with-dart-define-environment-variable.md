@@ -1,6 +1,6 @@
 ---
 title: "Configure a Flutter App with dart-define environment variable Part 1: HOST_URL"
-description: "In this short post I will show you how to set your host url dynamically and thus build a Flutter App for your Production server or for your staging server.
+description: "In this short post I will show you how to set your host url dynamically and thus build a Flutter App for your Production server or for your staging server."
 date: 2023-01-19
 slug: part-1-configure-a-flutter-app-with-dart-define-environment-variable
 ---

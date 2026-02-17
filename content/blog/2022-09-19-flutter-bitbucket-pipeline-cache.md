@@ -58,7 +58,7 @@ definitions:
 
 ```
 
----
+***
 
 We define the steps __Flutter-pub-get__ and __Lint-and-test__ plus the cache directory __$HOME/.pub-cache__
 
