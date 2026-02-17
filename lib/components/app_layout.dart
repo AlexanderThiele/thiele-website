@@ -111,7 +111,7 @@ class AppLayout extends PageLayoutBase {
             ]),
             css('main', [
               css('&').styles(
-                padding: Padding.only(top: 4.rem),
+                padding: Padding.only(top: 4.rem, bottom: 8.rem),
                 position: Position.relative(),
               ),
               css('> div', [

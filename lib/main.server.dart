@@ -80,7 +80,7 @@ void main() {
           AppLayout(
             header: Header(
               title: 'Alexander Thiele',
-              logo: '/images/logo.svg',
+              logo: '/apple-touch-icon.png',
               leading: [],
               items: [
                 a(classes: 'header-link', href: '/', [Component.text('Home')]),
