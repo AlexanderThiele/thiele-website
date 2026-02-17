@@ -220,6 +220,7 @@ class BlogGrid extends StatelessComponent {
     css('.article-entry img').styles(
       width: 100.percent,
       height: Unit.auto,
+      margin: Margin.zero,
       raw: {
         'aspect-ratio': '16 / 9',
         'object-fit': 'cover',

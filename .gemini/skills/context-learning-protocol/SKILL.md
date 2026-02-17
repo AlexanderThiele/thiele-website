@@ -1,28 +1,26 @@
 ---
 name: context-learning-protocol
-description: Automated protocol for capturing, organizing, and retrieving project context, decisions, and learnings. Use this skill at the end of significant tasks or when key architectural decisions, user preferences, or project-specific learnings are identified to ensure they are persistently recorded in /context/.
+description: Automated protocol for capturing, organizing, and retrieving project context, preferences, and learnings. Use this skill at the end of significant tasks or when key user preferences or project-specific learnings are identified to ensure they are persistently recorded in /context/.
 ---
 
 # Context Learning Protocol
 
 ## Overview
-This skill enforces a disciplined approach to knowledge management within the project. It ensures that every significant decision, user preference, and technical learning is automatically captured in a structured format under the `/context/` directory. This allows the agent to "remember" and "learn" from past interactions, creating a self-improving development environment.
+This skill enforces a disciplined approach to knowledge management within the project. It ensures that every significant user preference and technical learning is automatically captured in a structured format under the `/context/` directory. This allows the agent to "remember" and "learn" from past interactions, creating a self-improving development environment.
 
 ## Protocol Workflow
 
 ### 1. Identify Learnings
 During or after a task, actively identify **TECHNICAL** aspects only:
-- **Decisions:** Architectural choices, library selections, or significant refactors (e.g., "Switched from Provider to Riverpod because...").
 - **Preferences:** User-stated likes/dislikes regarding style, syntax, or workflow (e.g., "User prefers 2-space indentation" or "Always use named parameters").
-- **Learnings:** Solutions to tricky bugs, quirks of the codebase, or performance optimizations (e.g., "Hot reload fails when modifying `main.server.dart`").
+- **Learnings:** Solutions to tricky bugs, quirks of the codebase, performance optimizations, or **discoveries of non-obvious CLI tools and platform-specific utilities** (e.g., "Using `sips` for image processing on macOS" or "Hot reload fails when modifying `main.server.dart`").
 
-**DO NOT** save minor UI/styling changes (e.g., color adjustments, padding, font sizes, or layout widths), project management updates, minor tooling additions (e.g., generic CLI shortcuts), or purely content-related changes unless they involve a critical technical implementation detail or architectural shift. Focus exclusively on technical context that significantly impacts the development workflow or codebase architecture.
+**DO NOT** save minor UI/styling changes (e.g., color adjustments, padding, font sizes, or layout widths), project management updates, or purely content-related changes. However, **ALWAYS capture technical solutions, even if they seem like "one-off" fixes**, if they involve a specific tool or methodology that could be reused. Focus on technical context that impacts the development workflow or codebase architecture.
 
 ### 2. File Naming Convention
 Save new context files in `context/` with descriptive, kebab-case names and a `.md` extension.
 - Format: `context/[category]-[topic].md`
 - Examples:
-    - `context/decision-state-management.md`
     - `context/preference-coding-style.md`
     - `context/learning-jaspr-routing.md`
 
@@ -33,16 +31,16 @@ Each context file MUST follow this template:
 # [Title of Context]
 
 ## Type
-[Decision | Preference | Learning]
+[Preference | Learning]
 
 ## Date
 [YYYY-MM-DD]
 
 ## Description
-[Concise description of the context, decision, or finding.]
+[Concise description of the context, or finding.]
 
 ## Context/Reasoning
-[Why was this decided? What happened? What is the user's rationale?]
+[What happened? What is the user's rationale?]
 
 ## Actionable Item
 [How should this affect future work? e.g., "Always use X for Y", "Do not suggest Z".]
@@ -58,13 +56,13 @@ After creating or modifying a context file, YOU MUST update the master index at 
 
 | Date | Type | Topic | File |
 |------|------|-------|------|
-| 2026-02-14 | Decision | Blog Architecture | [decision-blog-arch.md](decision-blog-arch.md) |
+| 2026-02-14 | Learning | Blog Architecture | [learning-blog-arch.md](learning-blog-arch.md) |
 | ... | ... | ... | ... |
 ```
 
 ## Automated Triggers
 - **Post-Interaction Check:** Before finishing a turn or a task, ask yourself: "Did I learn something permanent?" If yes, execute this protocol.
-- **Explicit Instruction:** If the user says "Remember this" or "Save this decision", execute this protocol immediately.
+- **Explicit Instruction:** If the user says "Remember this" or "Save this learning", execute this protocol immediately.
 
 ## Tool Usage
 - Use `write_file` to create new context files.

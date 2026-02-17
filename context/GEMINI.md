@@ -18,4 +18,8 @@
 | 2026-02-16 | Learning | Custom Routing | [learning-jaspr-content-custom-routing.md](learning-jaspr-content-custom-routing.md) |
 | 2026-02-17 | Learning | YAML Frontmatter Issues | [learning-yaml-frontmatter-issues.md](learning-yaml-frontmatter-issues.md) |
 | 2026-02-17 | Decision | Automatic Blog Previews | [decision-automatic-blog-preview-images.md](decision-automatic-blog-preview-images.md) |
+| 2026-02-17 | Decision | New Favicon | [decision-new-favicon.md](decision-new-favicon.md) |
+| 2026-02-17 | Learning | Image Manipulation with sips | [learning-sips-image-manipulation.md](learning-sips-image-manipulation.md) |
+| 2026-02-17 | Learning | Jaspr link() sizes attribute | [learning-jaspr-link-sizes.md](learning-jaspr-link-sizes.md) |
+| 2026-02-17 | Preference | Blog Grid Image Margin | [preference-blog-grid-image-margin.md](preference-blog-grid-image-margin.md) |
 
