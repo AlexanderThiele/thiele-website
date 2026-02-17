@@ -3,4 +3,4 @@ title: "Alexander Thiele - Flutter Blog"
 description: "Techi 👨‍💻 Startup Enthusiast, Entrepreneur, Co-Founder. Creating Company & Engineering Culture & Flutter fan 🤓"
 ---
 
-<BlogGrid />
+<BlogGrid title="Latest Blog Posts" />

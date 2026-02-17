@@ -17,4 +17,5 @@
 | 2026-02-16 | Decision | Blog Post Filenames | [decision-blog-post-filenames.md](decision-blog-post-filenames.md) |
 | 2026-02-16 | Learning | Custom Routing | [learning-jaspr-content-custom-routing.md](learning-jaspr-content-custom-routing.md) |
 | 2026-02-17 | Learning | YAML Frontmatter Issues | [learning-yaml-frontmatter-issues.md](learning-yaml-frontmatter-issues.md) |
+| 2026-02-17 | Decision | Automatic Blog Previews | [decision-automatic-blog-preview-images.md](decision-automatic-blog-preview-images.md) |
 

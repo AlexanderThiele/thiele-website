@@ -1,9 +1,12 @@
 import 'dart:io';
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_content/theme.dart';
 
 class BlogGrid extends StatelessComponent {
-  const BlogGrid({super.key});
+  final String? title;
+
+  const BlogGrid({this.title, super.key});
 
   @override
   Component build(BuildContext context) {
@@ -25,7 +28,7 @@ class BlogGrid extends StatelessComponent {
     return div(
       classes: 'blog-grid',
       [
-        h2([.text('Latest Blog Posts')]),
+        if (title != null) h2([.text(title!)]),
         ul(
           classes: 'article-list',
           posts.map((post) => li(
@@ -38,9 +41,9 @@ class BlogGrid extends StatelessComponent {
                   if (post.image != null)
                     img(src: post.image!, alt: post.title),
                   h2(classes: 'article-title', [.text(post.title)]),
+                  div(classes: 'article-description', [p([.text(post.description)])]),
                 ],
               ),
-              div([p([.text(post.description)])]),
               div(
                 classes: 'article-meta',
                 [
@@ -105,17 +108,39 @@ class BlogGrid extends StatelessComponent {
       title = file.path.split('/').last.replaceAll('.md', '');
     }
 
-    final url = '/blog/${slug ?? file.path.split('/').last.replaceAll('.md', '')}';
+    final fileName = file.path.split('/').last.replaceAll('.md', '');
+    final url = '/blog/${slug ?? fileName}';
 
-    return _PostData(title, date, description, tags, image, url);
+    if (image == null) {
+      final heroImage = '/images/hero/${slug ?? fileName}.png';
+      if (File('web$heroImage').existsSync()) {
+        image = heroImage;
+      }
+    }
+
+    // Format date from YYYY-MM-DD to dd.MM.YYYY
+    String formattedDate = date;
+    try {
+      final parts = date.split('-');
+      if (parts.length == 3) {
+        formattedDate = '${parts[2]}.${parts[1]}.${parts[0]}';
+      }
+    } catch (_) {}
+
+    return _PostData(title, formattedDate, description, tags, image, url);
   }
 
   @css
   static List<StyleRule> get styles => [
     css('.blog-grid').styles(
-      maxWidth: 64.rem,
+      maxWidth: 80.rem,
       margin: .symmetric(horizontal: .auto, vertical: 2.rem),
       padding: .symmetric(horizontal: 2.rem),
+    ),
+    css('.blog-grid > h2').styles(
+      fontSize: 2.5.rem,
+      fontWeight: FontWeight.w800,
+      margin: .only(bottom: 2.rem),
     ),
     css('.article-list').styles(
       display: Display.grid,
@@ -123,43 +148,72 @@ class BlogGrid extends StatelessComponent {
       margin: .all(Unit.zero),
       padding: .all(Unit.zero),
       raw: {
-        'grid-template-columns': 'repeat(auto-fit, minmax(420px, 1fr))',
-        'gap': '3rem',
+        'grid-template-columns': 'repeat(auto-fit, minmax(360px, 1fr))',
+        'gap': '2rem',
       },
     ),
     css('.article-entry').styles(
-      padding: .all(1.rem),
       display: Display.flex,
       flexDirection: FlexDirection.column,
+      padding: .all(Unit.zero),
       raw: {
-        'border': '1px solid rgba(0, 0, 0, 0.2)',
+        'border': '1px solid rgba(0, 0, 0, 0.1)',
+        'transition': 'transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
+        'overflow': 'hidden',
+        'background-color': 'var(--background)',
+      },
+    ),
+    css('.article-entry:hover').styles(
+      raw: {
+        'transform': 'translateY(-4px)',
+        'box-shadow': '0 10px 20px rgba(0,0,0,0.1)',
       },
     ),
     css('.article-link').styles(
       textDecoration: TextDecoration.none,
       color: Color.inherit,
+      display: Display.block,
     ),
     css('.article-link:hover .article-title').styles(
-      raw: {'text-decoration': 'underline'},
+      color: ContentColors.primary,
     ),
     css('.article-title').styles(
       fontSize: 1.5.rem,
-      margin: .only(top: 1.rem, bottom: 0.5.rem),
+      fontWeight: FontWeight.w700,
+      margin: .all(Unit.zero),
+      padding: .only(top: 1.5.rem, left: 1.5.rem, right: 1.5.rem, bottom: 0.5.rem),
+      raw: {'line-height': '1.2'},
+    ),
+    css('.article-description').styles(
+      fontSize: 1.rem,
+      padding: .symmetric(horizontal: 1.5.rem),
+      margin: .only(bottom: 1.5.rem),
+      raw: {
+        'color': '#666',
+        'display': '-webkit-box',
+        '-webkit-line-clamp': '3',
+        '-webkit-box-orient': 'vertical',
+        'overflow': 'hidden',
+      },
     ),
     css('.article-meta').styles(
       display: Display.flex,
       justifyContent: JustifyContent.spaceBetween,
+      alignItems: AlignItems.center,
       fontSize: 0.875.rem,
+      padding: .all(1.5.rem),
       raw: {
         'margin-top': 'auto',
-        'color': '#666',
+        'border-top': '1px solid rgba(0, 0, 0, 0.05)',
+        'color': '#888',
       },
     ),
     css('.tag').styles(
       padding: .symmetric(horizontal: 0.5.rem, vertical: 0.2.rem),
       radius: .circular(4.px),
+      fontWeight: FontWeight.w600,
       raw: {
-        'background-color': '#eee',
+        'background-color': 'rgba(0, 0, 0, 0.05)',
         'margin-left': '0.5rem',
       },
     ),
@@ -167,8 +221,9 @@ class BlogGrid extends StatelessComponent {
       width: 100.percent,
       height: Unit.auto,
       raw: {
-        'aspect-ratio': '2 / 1',
+        'aspect-ratio': '16 / 9',
         'object-fit': 'cover',
+        'display': 'block',
       },
     ),
   ];

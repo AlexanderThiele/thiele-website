@@ -69,7 +69,9 @@ void main() {
           ),
           CustomComponent(
             pattern: 'BlogGrid',
-            builder: (_, _, _) => BlogGrid(),
+            builder: (name, attrs, child) => BlogGrid(
+              title: attrs['title'],
+            ),
           ),
           // Adds zooming and caption support to images.
           Image(zoom: true),
