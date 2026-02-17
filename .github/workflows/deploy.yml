@@ -19,9 +19,11 @@ jobs:
       - name: Install dependencies
         run: dart pub get
       - name: Install Jaspr CLI
-        run: dart pub global activate jaspr
+        run: |
+          dart pub global activate jaspr_cli
+          echo "$(dart pub cache dir)/bin" >> $GITHUB_PATH
       - name: Build site
-        run: dart pub global run jaspr build
+        run: jaspr build
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
