@@ -10,9 +10,12 @@ description: Alexander Thiele is a Google Developer Expert for Flutter with over
 
 ## Events, Keynotes & Talks
 
+* **2025-12**: Antigravity vs Claude code @ Flutter Munich Meetup
 * **2025-09**: Build Your Own AI Sidekick with Flutter @ Fluttercon EU 2025
+* **2024-10**: Presenting Servus Flutter @ Flutter Munich Meetup
 * **2024-10**: Powering offline-first forestry in Europe's wilds @ Local-First Conf
 * **2024-05**: Flutter Shaders on Tablets: Where pencil drawings come to life @ Flutter Forward Extended 2024
+* **2022-08**: Dart Code Tips and Tricks @ Flutter Munich Meetup
 * **2022-04**: From VueJS to Flutter Web: A Progressive Enhancement Journey
 * **2018**: Google I/O: Featured about how to improve your Apps quality
 * **2018**: Firebase Keynote: Professional Featured Video with the Doodle Team
