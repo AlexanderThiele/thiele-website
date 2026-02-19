@@ -1,7 +1,7 @@
 ---
 title: "4 Years at Doodle"
 description: My journey continues at Doodle.
-date: "2022-04-09"
+date: 2022-04-09
 slug: 4-years-at-doodle
 tags: ["Flutter", "Doodle", "Career"]
 ---

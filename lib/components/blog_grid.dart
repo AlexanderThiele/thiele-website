@@ -23,7 +23,7 @@ class BlogGrid extends StatelessComponent {
         .toList();
 
     // Sort by date descending
-    posts.sort((p1, p2) => p2.date.compareTo(p1.date));
+    posts.sort((p1, p2) => p2.rawDate.compareTo(p1.rawDate));
 
     return div(
       classes: 'blog-grid',
@@ -120,14 +120,16 @@ class BlogGrid extends StatelessComponent {
 
     // Format date from YYYY-MM-DD to dd.MM.YYYY
     String formattedDate = date;
+    DateTime rawDate = DateTime.now();
     try {
+      rawDate = DateTime.parse(date);
       final parts = date.split('-');
       if (parts.length == 3) {
         formattedDate = '${parts[2]}.${parts[1]}.${parts[0]}';
       }
     } catch (_) {}
 
-    return _PostData(title, formattedDate, description, tags, image, url);
+    return _PostData(title, formattedDate, description, tags, image, url, rawDate);
   }
 
   @css
@@ -237,6 +239,7 @@ class _PostData {
   final List<String> tags;
   final String? image;
   final String url;
+  final DateTime rawDate;
 
-  _PostData(this.title, this.date, this.description, this.tags, this.image, this.url);
+  _PostData(this.title, this.date, this.description, this.tags, this.image, this.url, this.rawDate);
 }
