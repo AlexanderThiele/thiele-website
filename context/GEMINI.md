@@ -25,4 +25,6 @@
 | 2026-02-17 | Decision | Recreated About Page | [decision-recreated-about-page.md](decision-recreated-about-page.md) |
 | 2026-02-17 | Learning | Context7 mapping for jaspr_content | [learning-jaspr-content7-mapping.md](learning-jaspr-content7-mapping.md) |
 | 2026-02-17 | Decision | GitHub Workflow for Netlify | [decision-github-netlify-workflow.md](decision-github-netlify-workflow.md) |
+| 2026-02-19 | Learning | Image Generation on macOS | [learning-image-generation-macos.md](learning-image-generation-macos.md) |
+| 2026-02-19 | Decision | Created Image-Generation Skill | [.gemini/skills/creating-images/SKILL.md](.gemini/skills/creating-images/SKILL.md) |
 
