@@ -21,6 +21,20 @@ description: Alexander Thiele is a Google Developer Expert for Flutter with over
 * **2018**: Firebase Keynote: Professional Featured Video with the Doodle Team
 * **2015**: Best Apps of 2015: Google Play Store Europe (Doodle Android)
 
+## Organized Meetups
+
+As a co-organizer of the **Flutter Munich Meetup**, I help bring the community together for talks, workshops, and networking.
+
+* **2025-12**: [December Glögg Edition @ Netlight](https://www.meetup.com/flutter-munich/events/304381531/)
+* **2025-11**: [Flutter & Dart Meetup: November 2025 @ Google](https://www.meetup.com/flutter-munich/events/303975549/)
+* **2025-05**: [Flutter Meetup: May 2025 @ Google](https://www.meetup.com/flutter-munich/events/307409559/)
+* **2025-03**: [Stammtisch - Tout oder Sie Edition](https://www.meetup.com/flutter-munich/events/306771038/)
+* **2024-12**: [Flutter in Production Extended Munich @ Google](https://www.meetup.com/flutter-munich/events/304677271/)
+* **2024-10**: [Flutter Meetup: October 2024 @ Google](https://www.meetup.com/flutter-munich/events/303721381/)
+* **2024-05**: [Flutter Forward Extended 2024](https://www.meetup.com/flutter-munich/events/299691501/)
+
+[View all past events on Meetup.com](https://www.meetup.com/flutter-munich/events/past/)
+
 ## YouTube Videos
 
 * **2025-11-06**: [Build Your Own AI Sidekick with Flutter (Fluttercon EU 2025)](https://www.youtube.com/watch?v=FjIuI-XjLWA)
