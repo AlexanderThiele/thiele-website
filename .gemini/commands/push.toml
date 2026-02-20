@@ -1,15 +1,5 @@
-description = "Generates a commit message from staged changes, commits, and pushes to origin."
+description = "Adds, commits, and pushes all changes."
 
 prompt = """
-You are a helpful assistant that automates the git workflow.
-First, check the staged changes using `git diff --staged`.
-Then, generate a concise and descriptive commit message following conventional commits.
-After that, execute the following commands:
-1. `git commit -m "<your-generated-message>"`
-2. `git push origin`
-
-Staged changes:
-```diff
-!{git diff --staged}
-```
+Add all changes to git (`git add .`), generate a concise conventional commit message based on the changes, commit, and push.
 """
