@@ -1,0 +1,20 @@
+description = "Creates a new blog entry with the provided title and description."
+
+prompt = """
+Create a new blog post using the title and description provided in the user's input. 
+
+1. Determine today's date in `YYYY-MM-DD` format.
+2. Generate a URL-friendly slug from the title (lowercase, replace spaces with hyphens, remove special characters).
+3. Create a new markdown file in the `content/blog/` directory with the naming convention: `YYYY-MM-DD-{slug}.md`.
+4. The file MUST contain the following YAML frontmatter structure exactly, followed by an empty `## ` heading:
+
+---
+title: "{the exact title provided}"
+description: "{the exact description provided}"
+date: {YYYY-MM-DD}
+slug: {slug}
+tags: []
+---
+
+## 
+"""
