@@ -8,6 +8,7 @@ Welcome to the repository for my personal blog! This site is statically generate
 *   **Framework:** [Jaspr](https://jaspr.site/) - A modern web framework for building websites in Dart.
 *   **Content Management:** [jaspr_content](https://pub.dev/packages/jaspr_content) - Used for rendering Markdown files into static HTML pages.
 *   **Static Site Generation (SSG):** The site is pre-built as static HTML, CSS, and JS files, ensuring fast load times, robust security, and excellent SEO.
+*   **AI Assistance:** Built and maintained with the help of [Gemini CLI](https://github.com/google/gemini-cli), an interactive AI agent for software engineering.
 
 ## Development
 
