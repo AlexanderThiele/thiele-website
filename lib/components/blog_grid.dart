@@ -83,7 +83,7 @@ class BlogGrid extends StatelessComponent {
           } else if (line.startsWith('date:')) {
             date = line.substring(5).trim();
           } else if (line.startsWith('description:')) {
-            description = line.substring(12).trim();
+            description = line.substring(12).trim().replaceAll('"', '');
           } else if (line.startsWith('slug:')) {
             slug = line.substring(5).trim();
           } else if (line.startsWith('tags:')) {

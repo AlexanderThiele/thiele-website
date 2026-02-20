@@ -21,3 +21,4 @@ The issues identified were:
 - Ensure all quotes are closed.
 - Use `***` or `___` for horizontal rules in Markdown to avoid confusion with `---` frontmatter delimiters.
 - Quote dates (`date: "YYYY-MM-DD"`) to ensure they are consistently treated as strings.
+- Note: Since `blog_grid.dart` manually parses frontmatter using `split('\n')` and `substring()`, any quotes added around values (like title or description) must be manually removed using `.replaceAll('"', '')`.
