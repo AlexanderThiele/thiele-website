@@ -36,7 +36,14 @@ The benefits are clear:
 
 [Jaspr](https://pub.dev/packages/jaspr) is a web framework that brings Dart to web development by using its isomorphic capabilities.
 
-Instead of relying purely on client-side rendering, Jaspr executes Dart code on the server during the build phase. This generates raw HTML files for search engine optimization and fast initial loads. Once the browser receives the page, Jaspr "hydrates" it with compiled JavaScript to add interactivity. This provides the performance of a static site with the dynamic capabilities of a modern web application.
+Instead of relying purely on client-side rendering, Jaspr executes Dart code during a CI/CD build phase (such as a GitHub Actions workflow). This process generates the raw HTML files necessary for search engine optimization and fast initial loads, which can then be deployed to a CDN like Netlify. Once the browser receives the page, Jaspr "hydrates" it with compiled JavaScript to add interactivity. This provides the performance of a static site with the dynamic capabilities of a modern web application.
+
+For example, a typical [deployment workflow](https://github.com/AlexanderThiele/thiele-website/blob/main/.github/workflows/deploy.yml) involves the following steps:
+1.  **Setting up the Environment**: Checking out the repository and installing Dart.
+2.  **Fetching Dependencies**: Running `dart pub get` to download required packages.
+3.  **Installing Jaspr CLI**: Activating the `jaspr_cli` globally.
+4.  **Building the Site**: Executing `jaspr build` to generate the static HTML, CSS, and JavaScript files.
+5.  **Deployment**: Uploading the generated `build/jaspr` directory to a hosting provider like Netlify.
 
 ## Integrating the AI Agent: Gemini CLI
 
