@@ -9,6 +9,10 @@ description: Expert guidance for generating images (PNG, JPG) using built-in mac
 
 This skill provides a fallback workflow for generating and manipulating images when common libraries (Pillow, ImageMagick) are missing. It leverages macOS-specific command-line utilities.
 
+## Assets
+
+- **Flutter Logo:** A Flutter logo SVG is available at `.gemini/skills/creating-images/assets/flutter_logo.svg`. When generating SVGs that require a Flutter logo, read this file and inject its `<path>` and `<g>` contents (or the entire `<svg>` as an inner `<svg>` element) into your target SVG template to ensure correct rendering.
+
 ## Workflows
 
 ### 1. Generating PNG from SVG (macOS)
