@@ -49,6 +49,26 @@ class AppLayout extends PageLayoutBase {
       }
     }
 
+    var path = page.path;
+    if (!path.startsWith('/')) path = '/$path';
+    var isBlogPost = path.startsWith('/blog/') && path != '/blog/' && path != '/blog/index' && path != '/blog/index.md';
+    
+    var date = page.data.page['date'];
+    String? formattedDate;
+    if (date != null) {
+      if (date is DateTime) {
+        formattedDate = '${date.day.toString().padLeft(2, '0')}.${date.month.toString().padLeft(2, '0')}.${date.year}';
+      } else {
+        var dateStr = date.toString();
+        try {
+          var d = DateTime.parse(dateStr);
+          formattedDate = '${d.day.toString().padLeft(2, '0')}.${d.month.toString().padLeft(2, '0')}.${d.year}';
+        } catch (_) {
+          formattedDate = dateStr;
+        }
+      }
+    }
+
     return div(
       classes: 'docs',
       [
@@ -76,6 +96,10 @@ class AppLayout extends PageLayoutBase {
                       classes: 'content-body',
                       [
                         child,
+                        if (isBlogPost && formattedDate != null)
+                          div(classes: 'content-date', [
+                            Component.text('Published on $formattedDate'),
+                          ]),
                       ],
                     ),
                   ],
@@ -143,6 +167,16 @@ class AppLayout extends PageLayoutBase {
                   css('.content-body').styles(
                     maxWidth: 64.rem,
                     margin: Margin.symmetric(horizontal: Unit.auto),
+                  ),
+                  css('.content-date').styles(
+                    margin: Margin.only(top: 4.rem),
+                    padding: Padding.only(top: 1.rem),
+                    raw: {
+                      'border-top': '1px solid #eee',
+                      'color': '#888',
+                    },
+                    fontSize: 0.9.rem,
+                    textAlign: TextAlign.right,
                   ),
                 ]),
               ]),
