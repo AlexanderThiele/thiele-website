@@ -59,7 +59,7 @@ As a co-organizer of the **Flutter Munich Meetup**, I help bring the community t
 ## Podcasts
 
 * **2021 - 2023**: Solana NFT Podcast Host - First German Solana NFT Podcast. On Spotify, Google Podcast, Apple Podcast and many more.
-* Uplink Podcast #24: Member Spotlight - Alexander Thiele über seine Arbeit als Freelance Flutter Developer, sein Startup LinkFive und wie man auch mit Baby entspannt durch Japan reisen kann.
+* **2023-08-21**: Uplink Podcast #24: Member Spotlight - Alexander Thiele über seine Arbeit als Freelance Flutter Developer, sein Startup LinkFive und wie man auch mit Baby entspannt durch Japan reisen kann.
 
 ## YouTube Videos
 
