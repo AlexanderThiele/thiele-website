@@ -53,6 +53,10 @@ As a co-organizer of the **Flutter Munich Meetup**, I help bring the community t
 
 [View all past events on Meetup.com](https://www.meetup.com/flutter-munich/events/past/)
 
+## Podcasts
+
+* Uplink Podcast #24: Member Spotlight - Alexander Thiele über seine Arbeit als Freelance Flutter Developer, sein Startup LinkFive und wie man auch mit Baby entspannt durch Japan reisen kann.
+
 ## YouTube Videos
 
 * **2025-11-06**: [Build Your Own AI Sidekick with Flutter (Fluttercon EU 2025)](https://www.youtube.com/watch?v=FjIuI-XjLWA)

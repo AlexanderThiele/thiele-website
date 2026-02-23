@@ -28,3 +28,4 @@ The project uses the `jaspr` CLI for development and production builds.
 - **Client-Side Interactivity:** Use the `@client` annotation for components that require client-side state or interactivity (like a comments section or like button).
 - **Styling:** Maintain a clean, readable blog aesthetic. Styles are defined using Jaspr's CSS-in-Dart approach within components.
 - **Linting:** Follow standard Dart linting rules as defined in `analysis_options.yaml`.
+- **Verification:** ALWAYS after ANY edit, spawn the `tester` agent and ask if the actual task is completed. If not, fix it automatically until the `tester` agent confirms completion.
