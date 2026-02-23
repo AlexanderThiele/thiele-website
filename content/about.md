@@ -64,6 +64,7 @@ As a co-organizer of the **Flutter Munich Meetup**, I help bring the community t
 ## YouTube Videos
 
 * **2025-11-06**: [Build Your Own AI Sidekick with Flutter (Fluttercon EU 2025)](https://www.youtube.com/watch?v=FjIuI-XjLWA)
+* **2025-10-17**: [Powering offline-first forestry in Europe's wilds (Fluttercon EU 2025)](https://www.youtube.com/watch?v=QCwwKWm9UDQ)
 * **2024-10-09**: [Powering offline-first forestry in Europe's wilds (Local-First Conf)](https://www.youtube.com/watch?v=Ifi7dfH3Crw)
 * **2024-05-22**: [Flutter Shaders on Tablets (Flutter Forward Extended 2024)](https://www.youtube.com/watch?v=DAsl6Qz-m8Q)
 * **2018-05-10**: [Developer Stories 2](https://www.youtube.com/watch?v=RcZn5iD-z9s)
