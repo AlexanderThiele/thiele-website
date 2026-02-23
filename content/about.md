@@ -5,8 +5,11 @@ description: Alexander Thiele is a Google Developer Expert for Flutter with over
 
 ## Community & Recognition
 
+* **2025 - Present**: MapLibre Organization Voting Member & Open Source Flutter Project Maintainer
 * **2023 - Present**: Google Developer Expert (GDE) for Flutter
 * **2022 - Present**: Flutter Munich Meetup Co-organizer
+* **2021 - 2023**: Solana NFT Podcast Host
+* **2021 - 2022**: Product Hunt Ambassador
 
 ## Events, Keynotes & Talks
 
@@ -55,6 +58,7 @@ As a co-organizer of the **Flutter Munich Meetup**, I help bring the community t
 
 ## Podcasts
 
+* **2021 - 2023**: Solana NFT Podcast Host - First German Solana NFT Podcast. On Spotify, Google Podcast, Apple Podcast and many more.
 * Uplink Podcast #24: Member Spotlight - Alexander Thiele über seine Arbeit als Freelance Flutter Developer, sein Startup LinkFive und wie man auch mit Baby entspannt durch Japan reisen kann.
 
 ## YouTube Videos
