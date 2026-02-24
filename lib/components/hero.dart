@@ -84,12 +84,17 @@ class Hero extends StatelessComponent {
       },
     ),
     css('.hero-title').styles(
-      fontSize: 3.rem,
+      fontSize: 2.rem,
       fontWeight: FontWeight.w800,
       letterSpacing: (-0.012).em,
       margin: .only(bottom: 1.25.rem),
       raw: {'line-height': '1.1'},
     ),
+    css.media(MediaQuery.all(minWidth: 768.px), [
+      css('.hero-title').styles(
+        fontSize: 3.rem,
+      ),
+    ]),
     css('.hero-content').styles(
       fontSize: 1.5.rem,
       fontWeight: FontWeight.w600,
