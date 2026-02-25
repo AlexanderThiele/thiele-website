@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Format the code first (silently)
+dart format lib > /dev/null 2>&1
+
 # Run dart analyze and capture its output
 # We use -n in echo and capture to be safe, but dart analyze default is fine.
 # We'll filter out the "Analyzing..." and time to keep it clean.

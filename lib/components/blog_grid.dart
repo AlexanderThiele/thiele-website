@@ -16,7 +16,8 @@ class BlogGrid extends StatelessComponent {
       return div([.text('Blog directory not found')]);
     }
 
-    final posts = blogDir.listSync()
+    final posts = blogDir
+        .listSync()
         .whereType<File>()
         .where((f) => f.path.endsWith('.md') && !f.path.endsWith('index.md'))
         .map((f) => _parsePost(f))
@@ -31,32 +32,37 @@ class BlogGrid extends StatelessComponent {
         if (title != null) h2([.text(title!)]),
         ul(
           classes: 'article-list',
-          posts.map((post) => li(
-            classes: 'article-entry',
-            [
-              a(
-                href: post.url,
-                classes: 'article-link',
-                [
-                  if (post.image != null)
-                    img(src: post.image!, alt: post.title),
-                  h2(classes: 'article-title', [.text(post.title)]),
-                  div(classes: 'article-description', [p([.text(post.description)])]),
-                ],
-              ),
-              div(
-                classes: 'article-meta',
-                [
-                  small(classes: 'meta-date', [.text(post.date)]),
-                  if (post.tags.isNotEmpty)
-                    small(
-                      classes: 'meta-tags',
-                      post.tags.map((tag) => span(classes: 'tag', [.text(tag)])).toList(),
+          posts
+              .map(
+                (post) => li(
+                  classes: 'article-entry',
+                  [
+                    a(
+                      href: post.url,
+                      classes: 'article-link',
+                      [
+                        if (post.image != null) img(src: post.image!, alt: post.title),
+                        h2(classes: 'article-title', [.text(post.title)]),
+                        div(classes: 'article-description', [
+                          p([.text(post.description)]),
+                        ]),
+                      ],
                     ),
-                ],
-              ),
-            ],
-          )).toList(),
+                    div(
+                      classes: 'article-meta',
+                      [
+                        small(classes: 'meta-date', [.text(post.date)]),
+                        if (post.tags.isNotEmpty)
+                          small(
+                            classes: 'meta-tags',
+                            post.tags.map((tag) => span(classes: 'tag', [.text(tag)])).toList(),
+                          ),
+                      ],
+                    ),
+                  ],
+                ),
+              )
+              .toList(),
         ),
       ],
     );
@@ -65,7 +71,7 @@ class BlogGrid extends StatelessComponent {
   _PostData _parsePost(File file) {
     final content = file.readAsStringSync();
     final lines = content.split('\n');
-    
+
     String title = '';
     String date = '';
     String description = '';

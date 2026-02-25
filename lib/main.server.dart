@@ -102,7 +102,7 @@ void main() {
       ),
       routerBuilder: (routes) {
         final flatRoutes = routes.expand((r) => r).toList();
-        
+
         // Find blog routes and override their paths if they have a slug
         for (var i = 0; i < flatRoutes.length; i++) {
           final r = flatRoutes[i];
@@ -126,7 +126,7 @@ void main() {
             }
           }
         }
-        
+
         return Router(routes: flatRoutes);
       },
     ),
