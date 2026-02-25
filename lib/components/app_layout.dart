@@ -117,66 +117,63 @@ class AppLayout extends PageLayoutBase {
           css('.header-container', [
             css('&').styles(
               position: Position.fixed(top: Unit.zero, left: Unit.zero, right: Unit.zero),
-              zIndex: ZIndex(10),
               raw: {'backdrop-filter': 'blur(8px)'},
+              zIndex: ZIndex(10),
             ),
-            css('.header-content').styles(
-              maxWidth: 80.rem,
-              margin: Margin.symmetric(horizontal: Unit.auto),
-            ),
-          ]),
+                          css('.header-content').styles(
+                            maxWidth: 80.rem,
+                            margin: Margin.symmetric(horizontal: Unit.auto),
+                          ),          ]),
           css('.main-container', [
             css('&').styles(
-              margin: Margin.symmetric(horizontal: Unit.auto),
               padding: Padding.zero,
+              margin: Margin.symmetric(horizontal: Unit.auto),
             ),
             css.media(MediaQuery.all(minWidth: 768.px), [
               css('&').styles(padding: Padding.symmetric(horizontal: 1.25.rem)),
             ]),
             css('main', [
               css('&').styles(
-                padding: Padding.only(top: 4.rem, bottom: 8.rem),
                 position: Position.relative(),
+                padding: Padding.only(top: 4.rem, bottom: 8.rem),
               ),
               css('> div', [
-                css('&').styles(
-                  display: Display.flex,
-                  justifyContent: JustifyContent.center,
-                  padding: Padding.only(top: 2.rem, left: 1.rem, right: 1.rem),
-                ),
-                css('.content-container', [
+                                  css('&').styles(
+                                    display: Display.flex,
+                                    padding: Padding.only(top: 2.rem, left: 1.rem, right: 1.rem),
+                                    justifyContent: JustifyContent.center,
+                                  ),                css('.content-container', [
                   css('&').styles(
                     flex: Flex(grow: 1, shrink: 1, basis: 0.percent),
+                    padding: Padding.only(right: Unit.zero),
                     maxWidth: 80.rem,
                     minWidth: Unit.zero,
-                    padding: Padding.only(right: Unit.zero),
                   ),
                   css.media(MediaQuery.all(minWidth: 80.rem), [css('&').styles(padding: Padding.only(right: 3.rem))]),
                   css('.content-header', [
                     css('&').styles(
-                      color: ContentColors.headings,
                       margin: Margin.only(bottom: 2.rem),
+                      color: ContentColors.headings,
                     ),
                     css('h1').styles(fontSize: 2.rem, lineHeight: 2.25.rem),
-                    css('p').styles(
-                      fontSize: 1.25.rem,
-                      lineHeight: 1.25.rem,
-                      margin: Margin.only(top: .75.rem),
-                    ),
-                  ]),
+                                          css('p').styles(
+                                            fontSize: 1.25.rem,
+                                            lineHeight: 1.25.rem,
+                                            margin: Margin.only(top: .75.rem),
+                                          ),                  ]),
                   css('.content-body').styles(
-                    maxWidth: 64.rem,
                     margin: Margin.symmetric(horizontal: Unit.auto),
+                    maxWidth: 64.rem,
                   ),
                   css('.content-date').styles(
                     margin: Margin.only(top: 4.rem),
                     padding: Padding.only(top: 1.rem),
+                    textAlign: TextAlign.right,
+                    fontSize: 0.9.rem,
                     raw: {
                       'border-top': '1px solid #eee',
                       'color': '#888',
                     },
-                    fontSize: 0.9.rem,
-                    textAlign: TextAlign.right,
                   ),
                 ]),
               ]),
@@ -184,9 +181,9 @@ class AppLayout extends PageLayoutBase {
           ]),
         ]),
         css('.header-link').styles(
+          padding: .symmetric(horizontal: 1.rem, vertical: 0.5.rem),
           color: Color.inherit,
           fontWeight: FontWeight.w600,
-          padding: .symmetric(horizontal: 1.rem, vertical: 0.5.rem),
           textDecoration: TextDecoration.none,
           raw: {
             'border-bottom': '1.5px solid transparent',

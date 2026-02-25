@@ -14,3 +14,8 @@
 | 2026-02-17 | Learning | Context7 mapping for jaspr_content | [learning-jaspr-content7-mapping.md](learning-jaspr-content7-mapping.md) |
 | 2026-02-19 | Learning | Image Generation on macOS | [learning-image-generation-macos.md](learning-image-generation-macos.md) |
 | 2026-02-23 | Learning | Blog Post Sorting | [learning-blog-grid-date-sorting.md](learning-blog-grid-date-sorting.md) |
+| 2026-02-25 | Learning | AfterAgent Hook for Dart Analysis | [learning-after-agent-hook.md](learning-after-agent-hook.md) |
+| 2026-02-25 | Learning | Jaspr Styles Ordering | [learning-jaspr-styles-ordering.md](learning-jaspr-styles-ordering.md) |
+| 2026-02-25 | Learning | Bash Scripting: jq Line Breaks | [learning-bash-scripting-jq-line-breaks.md](learning-bash-scripting-jq-line-breaks.md) |
+| 2026-02-25 | Learning | Jaspr Build Hook | [learning-jaspr-build-hook.md](learning-jaspr-build-hook.md) |
+| 2026-02-25 | Preference | No Mandatory Jaspr Build | [preference-no-mandatory-jaspr-build.md](preference-no-mandatory-jaspr-build.md) |

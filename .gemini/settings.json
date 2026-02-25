@@ -2,5 +2,24 @@
   "experimental": {
     "plan": true,
     "enableAgents": true
+  },
+  "hooks": {
+    "AfterAgent": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "name": "dart-analyze",
+            "type": "command",
+            "command": ".gemini/hooks/dart_analyze.sh"
+          },
+          {
+            "name": "jaspr-build",
+            "type": "command",
+            "command": ".gemini/hooks/jaspr_build.sh"
+          }
+        ]
+      }
+    ]
   }
 }
