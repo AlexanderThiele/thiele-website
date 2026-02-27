@@ -101,3 +101,9 @@ The individual steps are only powerful if consistently executed. To automate thi
 This single line is the engine of the Alignment Loop. It forces the agent into an iterative, self-correcting cycle. If the static analysis fails, it fixes it. If the build fails, it fixes it. If the tester agent reports that the expected HTML isn't there, it fixes it. 
 
 Through this series of checks, I rely on the Gemini CLI to not just write code, but to deliver verified, working solutions.
+
+---
+
+## Beyond Prompts: Enforcing the Loop with Hooks
+
+However, even with these strict instructions, an agent can still occasionally "drift" and skip a verification step. To move from *asking* the agent to follow a loop to *enforcing* it through automation, I use **Gemini CLI Hooks**. You can [read more about how I automated the Alignment Loop here](https://thiele.dev/blog/gemini-cli-hooks-automating-the-ai-alignment-loop/).

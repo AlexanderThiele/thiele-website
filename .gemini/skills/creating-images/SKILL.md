@@ -1,6 +1,6 @@
 ---
 name: creating-images
-description: Expert guidance for generating images (PNG, JPG) using built-in macOS tools like qlmanage and sips. Use when Pillow, ImageMagick, or other third-party image libraries are unavailable.
+description: Expert guidance for generating images (PNG, JPG) using built-in macOS tools like qlmanage and sips. Specialized in creating high-quality, modern hero images (1200x630px) with fancy gradients and clean typography.
 ---
 
 # Creating Images
@@ -30,60 +30,58 @@ When generating SVGs that require these logos, read their files and inject their
 2. **Center the Content**: Place your target content area (e.g., 1200x630px) in the vertical center.
    - For a 1200x1200px canvas and 1200x630px content, the vertical offset is `(1200 - 630) / 2 = 285px`.
    - Wrap your content in a `<g transform="translate(0, 285)">` tag.
-3. **SVG Template Example**:
-   ```xml
-   <svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
-     <rect width="1200" height="1200" fill="white" />
-     <g transform="translate(0, 285)">
-       <!-- Your 1200x630 content here -->
-       <text x="600" y="315" text-anchor="middle" font-family="sans-serif" font-size="80">Title</text>
-     </g>
-   </svg>
-   ```
-5. **Advanced Template Example (Multi-Logo Hero):**
-   When using external logos, you can use gradients and `transform="... scale(...)"` groups to position and size them appropriately within the target content area.
-   ```xml
-   <svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
-     <defs>
-       <!-- Optional gradients for logos -->
-       <linearGradient id="dart-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-         <stop offset="0%" stop-color="#01599B"/><stop offset="100%" stop-color="#0175C2"/>
-       </linearGradient>
-     </defs>
-     <rect width="1200" height="1200" fill="#ffffff" />
-     <g transform="translate(0, 285)">
-       <rect width="1200" height="630" fill="#0f111a" />
-       
-       <!-- Left Logo (Scale 6x) -->
-       <g transform="translate(338, 160) scale(6)">
-         <!-- Injected <path> data here -->
-       </g>
 
-       <!-- Center Logo (Scale 0.6x) -->
-       <g transform="translate(537, 140) scale(0.6)">
-         <!-- Injected <path> data here -->
-       </g>
+### 2. "Fancy Modern" Hero Images
 
-       <!-- Right Logo (Scale 6x) -->
-       <g transform="translate(718, 160) scale(6)">
-          <!-- Injected <path> data here -->
-       </g>
-       
-       <text x="600" y="440" text-anchor="middle" font-family="Helvetica, sans-serif" font-size="64" font-weight="bold" fill="#ffffff">Title</text>
-     </g>
-   </svg>
-   ```
-4. **Generate Thumbnail**:
-   ```bash
-   qlmanage -t -s [width] -o . [file].svg
-   ```
-   This produces `[file].svg.png`.
-4. **Crop to Final Aspect Ratio**: Use `sips` to perform a centered crop to your target dimensions.
-   ```bash
-   sips -c [target_height] [target_width] [file].svg.png --out [final_name].png
-   ```
+Use this workflow to create high-fidelity hero images with soft gradients, rounded "inner glow" borders, and bold typography.
 
-### 2. Image Manipulation with `sips`
+**Gradient Palette (Pick 2 randomly for each image):**
+- **Tiffany Blue:** `#90f1ef`
+- **Pink:** `#ffd6e0`
+- **Yellow:** `#ffef9f`
+- **Light Green:** `#c1fba4`
+- **Mint:** `#7bf1a8`
+- **Text:** `#1e293b` (Slate 800)
+- **Accent:** `#0891b2` (Cyan 600)
+
+**SVG Template:**
+```xml
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="{RANDOM_COLOR_1}" />
+      <stop offset="100%" stop-color="{RANDOM_COLOR_2}" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="1200" fill="#ffffff" />
+
+  <g transform="translate(0, 285)">
+    <!-- Main Content Background -->
+    <rect width="1200" height="630" fill="url(#bg-grad)" />
+    
+    <!-- Inner Rounded Border (Glow Effect) -->
+    <rect x="30" y="30" width="1140" height="570" rx="40" ry="40" fill="none" stroke="#ffffff" stroke-width="6" opacity="0.5" />
+    
+    <!-- Left Icon (Scale 6x) -->
+    <g transform="translate(100, 100) scale(6)" fill="#8b5cf6">
+      <!-- Inject <path> from asset here -->
+    </g>
+
+    <!-- Content Group -->
+    <g transform="translate(100, 440)">
+      <text font-family="Helvetica, Arial, sans-serif" font-size="80" font-weight="900" fill="#1e293b" style="text-transform: uppercase; letter-spacing: -2px;">
+        {TITLE}
+      </text>
+      <text y="75" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="600" fill="#475569">
+        {SUBTITLE}
+      </text>
+    </g>
+  </g>
+</svg>
+```
+
+### 3. Image Manipulation with `sips`
 
 `sips` (Scriptable Image Processing System) is a powerful built-in macOS tool.
 
