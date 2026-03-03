@@ -105,6 +105,7 @@ class Hero extends StatelessComponent {
       margin: .all(Unit.zero),
       fontSize: 1.5.rem,
       fontWeight: FontWeight.w600,
+      lineHeight: 1.6.em,
     ),
   ];
 }

@@ -160,14 +160,22 @@ class AppLayout extends PageLayoutBase {
                 css('h1').styles(fontSize: 2.rem, lineHeight: 2.25.rem),
                 css('p').styles(
                   fontSize: 1.25.rem,
-                  lineHeight: 1.25.rem,
+                  lineHeight: 1.85.rem,
                   margin: Margin.only(top: .75.rem),
                 ),
               ]),
-              css('.content-body').styles(
-                margin: Margin.symmetric(horizontal: Unit.auto),
-                maxWidth: 64.rem,
-              ),
+              css('.content-body', [
+                css('&').styles(
+                  margin: Margin.symmetric(horizontal: Unit.auto),
+                  maxWidth: 64.rem,
+                ),
+                css('p').styles(
+                  lineHeight: 1.65.em,
+                ),
+                css('li').styles(
+                  lineHeight: 1.65.em,
+                ),
+              ]),
               css('.content-date').styles(
                 margin: Margin.only(top: 4.rem),
                 padding: Padding.only(top: 1.rem),
