@@ -20,6 +20,18 @@
           }
         ]
       }
+    ],
+    "AfterTool": [
+      {
+        "matcher": "write_.*",
+        "hooks": [
+          {
+            "name": "after-write-analyze",
+            "type": "command",
+            "command": ".gemini/hooks/after_write.sh"
+          }
+        ]
+      }
     ]
   }
 }
