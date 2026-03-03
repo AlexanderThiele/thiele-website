@@ -14,7 +14,11 @@ Automating verification with **Gemini CLI hooks** is the answer. By using these 
 
 ## What Are Gemini CLI Hooks?
 
-In the Gemini CLI, hooks are automated scripts that run at specific points in an agent's workflow. Configured in a project’s [**.gemini/settings.json**](https://github.com/AlexanderThiele/thiele-website/blob/main/.gemini/settings.json) file, these hooks act as an invisible layer of quality assurance.
+At their core, Gemini CLI hooks are automated interception points. They allow you to insert your own custom logic—like shell scripts or Python programs—directly into the AI agent's thought-and-action process. 
+
+Think of them as strict guardrails or an automated peer reviewer. Instead of hoping the AI remembers your prompting instructions to format a file or run a test, a hook physically stops the agent, runs a deterministic check, and either allows the agent to continue or forces it to fix an error before moving forward.
+
+These hooks act as an invisible layer of quality assurance. They are configured per-project in the [**.gemini/settings.json**](https://github.com/AlexanderThiele/thiele-website/blob/main/.gemini/settings.json) file, allowing you to tailor the rules exactly to your codebase's needs.
 
 ```json
 {
