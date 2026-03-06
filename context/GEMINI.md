@@ -20,3 +20,4 @@
 | 2026-02-25 | Learning | Jaspr Build Hook | [learning-jaspr-build-hook.md](learning-jaspr-build-hook.md) |
 | 2026-02-25 | Preference | No Mandatory Jaspr Build | [preference-no-mandatory-jaspr-build.md](preference-no-mandatory-jaspr-build.md) |
 | 2026-02-25 | Learning | Dart Analyze Hook Formatting | [learning-dart-analyze-hook-formatting.md](learning-dart-analyze-hook-formatting.md) |
+| 2026-03-06 | Learning | Hero Image Generation Command | [learning-hero-image-generation-command.md](learning-hero-image-generation-command.md) |

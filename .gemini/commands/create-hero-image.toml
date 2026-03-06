@@ -1,0 +1,17 @@
+description = "Generates a hero image for a blog post based on its slug."
+
+prompt = """
+Generate a hero image for the blog post with the provided slug.
+
+1. Locate the blog post markdown file in `content/blog/` that matches the slug.
+2. Extract the `title` and `description` (or first few tags) from the YAML frontmatter.
+3. Activate the `creating-images` skill.
+4. Use the "Fancy Modern" hero image workflow from the skill:
+    - Choose two random gradient colors from the palette (Tiffany Blue: #90f1ef, Pink: #ffd6e0, Yellow: #ffef9f, Light Green: #c1fba4, Mint: #7bf1a8).
+    - Use the provided SVG template (1200x1200px square canvas with 1200x630px centered content).
+    - Inject one of the logos from `.gemini/skills/creating-images/assets/` (e.g., `gemini_logo.svg` or `dart_logo.svg`) into the SVG.
+    - Set the `{TITLE}` and `{SUBTITLE}` (use the blog post description as subtitle).
+5. Render the SVG to a PNG using `qlmanage`.
+6. Use `sips` to crop the image to exactly 1200x630px from the center.
+7. Save the final image to `web/images/hero/{slug}.png`.
+"""
