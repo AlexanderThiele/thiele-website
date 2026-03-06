@@ -69,6 +69,23 @@ class AppLayout extends PageLayoutBase {
       }
     }
 
+    var updated = page.data.page['updated'];
+    String? formattedUpdatedDate;
+    if (updated != null) {
+      if (updated is DateTime) {
+        formattedUpdatedDate =
+            '${updated.day.toString().padLeft(2, '0')}.${updated.month.toString().padLeft(2, '0')}.${updated.year}';
+      } else {
+        var dateStr = updated.toString();
+        try {
+          var d = DateTime.parse(dateStr);
+          formattedUpdatedDate = '${d.day.toString().padLeft(2, '0')}.${d.month.toString().padLeft(2, '0')}.${d.year}';
+        } catch (_) {
+          formattedUpdatedDate = dateStr;
+        }
+      }
+    }
+
     return div(
       classes: 'docs',
       [
@@ -99,6 +116,10 @@ class AppLayout extends PageLayoutBase {
                         if (isBlogPost && formattedDate != null)
                           div(classes: 'content-date', [
                             Component.text('Published on $formattedDate'),
+                            if (formattedUpdatedDate != null) ...[
+                              br(),
+                              Component.text('Updated on $formattedUpdatedDate'),
+                            ],
                           ]),
                       ],
                     ),

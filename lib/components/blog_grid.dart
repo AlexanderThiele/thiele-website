@@ -13,7 +13,7 @@ class BlogGrid extends StatelessComponent {
     // Read blog posts from filesystem during build
     final blogDir = Directory('content/blog');
     if (!blogDir.existsSync()) {
-      return div([.text('Blog directory not found')]);
+      return div([Component.text('Blog directory not found')]);
     }
 
     final posts = blogDir
@@ -29,7 +29,7 @@ class BlogGrid extends StatelessComponent {
     return div(
       classes: 'blog-grid',
       [
-        if (title != null) h2([.text(title!)]),
+        if (title != null) h2([Component.text(title!)]),
         ul(
           classes: 'article-list',
           posts
@@ -42,20 +42,25 @@ class BlogGrid extends StatelessComponent {
                       classes: 'article-link',
                       [
                         if (post.image != null) img(src: post.image!, alt: post.title),
-                        h2(classes: 'article-title', [.text(post.title)]),
+                        h2(classes: 'article-title', [Component.text(post.title)]),
                         div(classes: 'article-description', [
-                          p([.text(post.description)]),
+                          p([Component.text(post.description)]),
                         ]),
                       ],
                     ),
                     div(
                       classes: 'article-meta',
                       [
-                        small(classes: 'meta-date', [.text(post.date)]),
+                        small(classes: 'meta-date', [
+                          Component.text(post.date),
+                          if (post.updatedDate != null) ...[
+                            Component.text(' (updated ${post.updatedDate!})'),
+                          ],
+                        ]),
                         if (post.tags.isNotEmpty)
                           small(
                             classes: 'meta-tags',
-                            post.tags.map((tag) => span(classes: 'tag', [.text(tag)])).toList(),
+                            post.tags.map((tag) => span(classes: 'tag', [Component.text(tag)])).toList(),
                           ),
                       ],
                     ),
@@ -74,6 +79,7 @@ class BlogGrid extends StatelessComponent {
 
     String title = '';
     String date = '';
+    String? updated;
     String description = '';
     String? slug;
     List<String> tags = [];
@@ -88,6 +94,8 @@ class BlogGrid extends StatelessComponent {
             title = line.substring(6).trim().replaceAll('"', '');
           } else if (line.startsWith('date:')) {
             date = line.substring(5).trim();
+          } else if (line.startsWith('updated:')) {
+            updated = line.substring(8).trim();
           } else if (line.startsWith('description:')) {
             description = line.substring(12).trim().replaceAll('"', '');
           } else if (line.startsWith('slug:')) {
@@ -135,7 +143,19 @@ class BlogGrid extends StatelessComponent {
       }
     } catch (_) {}
 
-    return _PostData(title, formattedDate, description, tags, image, url, rawDate);
+    String? formattedUpdatedDate;
+    if (updated != null) {
+      try {
+        final parts = updated.split('-');
+        if (parts.length == 3) {
+          formattedUpdatedDate = '${parts[2]}.${parts[1]}.${parts[0]}';
+        } else {
+          formattedUpdatedDate = updated;
+        }
+      } catch (_) {}
+    }
+
+    return _PostData(title, formattedDate, formattedUpdatedDate, description, tags, image, url, rawDate);
   }
 
   @css
@@ -241,11 +261,12 @@ class BlogGrid extends StatelessComponent {
 class _PostData {
   final String title;
   final String date;
+  final String? updatedDate;
   final String description;
   final List<String> tags;
   final String? image;
   final String url;
   final DateTime rawDate;
 
-  _PostData(this.title, this.date, this.description, this.tags, this.image, this.url, this.rawDate);
+  _PostData(this.title, this.date, this.updatedDate, this.description, this.tags, this.image, this.url, this.rawDate);
 }
