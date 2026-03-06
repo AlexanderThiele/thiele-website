@@ -1,9 +1,9 @@
 ---
-title: "Automating the AI Alignment Loop with the Gemini CLI AfterTool Hook"
+title: "Gemini CLI: Mastering the AfterTool Hook"
 description: "Discover how to automate AI verification using the Gemini CLI AfterTool hook. Learn to enforce code formatting, linting, and build steps instantly during AI tool execution."
 date: 2026-03-06
 slug: gemini-cli-aftertool-hook-ai-alignment
-tags: []
+tags: ["Gemini CLI", "Hooks", "AI Orchestration", "Agentic Workflow"]
 ---
 
 The Gemini CLI uses hooks to automate verification and close the AI alignment loop. The [AfterAgent hook](https://thiele.dev/blog/gemini-cli-hooks-automating-the-ai-alignment-loop/) acts as the final gatekeeper after an AI finishes its turn. You might use it for full project builds or test suites. In contrast, the AfterTool hook operates at a much more granular level.
