@@ -1,5 +1,5 @@
 ---
-title: "Gemini CLI Hooks: Automating the AI Alignment Loop"
+title: "Gemini CLI Hooks: From Manual Checks to AfterTool & AfterAgent Autonomy"
 description: "Discover how Gemini CLI hooks automate the AI alignment loop. Learn to use AfterAgent hooks for reliable, self-correcting AI code generation and orchestration."
 date: 2026-02-27
 updated: 2026-03-03
