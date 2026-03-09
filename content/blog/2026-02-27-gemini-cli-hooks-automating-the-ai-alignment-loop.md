@@ -145,3 +145,5 @@ In a standard workflow, the loop is open: the human provides intent, the AI gene
 With **hooks in place**, the loop becomes autonomous. The AI generates code, the system verifies it against hard constraints, and the AI self-corrects based on feedback. You are only brought back into the loop when the output is technically sound.
 
 This shift lets us lean fully into the orchestrator role. We no longer spend time catching missed semicolons or broken imports. Instead, we can focus on what matters: architectural integrity, user experience, and solving complex problems with speed, stability, and precision.
+
+Ready to dive deeper? Check out my follow-up post on [Mastering the AfterTool Hook](https://thiele.dev/blog/gemini-cli-aftertool-hook-ai-alignment/) to see how to implement atomic verification and path injection.
