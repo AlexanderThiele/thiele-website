@@ -23,7 +23,7 @@
     ],
     "AfterTool": [
       {
-        "matcher": "write_.*",
+        "matcher": "(write_file|replace)",
         "hooks": [
           {
             "name": "after-write-analyze",
@@ -33,5 +33,9 @@
         ]
       }
     ]
+  },
+  "ui": {
+    "showUserIdentity": false
+  }
   }
 }
