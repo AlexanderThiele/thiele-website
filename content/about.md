@@ -30,6 +30,7 @@ description: Alexander Thiele is a Google Developer Expert for Flutter with over
 
 As a co-organizer of the **Flutter Munich Meetup**, I help bring the community together for talks, workshops, and networking.
 
+* **2026-05-14**: Flutter Meetup: May 2026 @ Google (Organizer, Moderator & Raffle Moderator)
 * **2025-12**: December Glögg Edition @ Netlight
 * **2025-11**: Flutter & Dart Meetup: November 2025 @ Google
 * **2025-05**: Flutter Meetup: May 2025 @ Google
@@ -58,11 +59,13 @@ As a co-organizer of the **Flutter Munich Meetup**, I help bring the community t
 
 ## Podcasts
 
+* **2026-04-30**: [Hamze.tech Episode 060: Agentic Coding mit Alexander Thiele](https://hmze.tech/2026/04/30/060.html)
 * **2021 - 2023**: Solana NFT Podcast Host - First German Solana NFT Podcast. On Spotify, Google Podcast, Apple Podcast and many more.
 * **2023-08-21**: Uplink Podcast #24: Member Spotlight - Alexander Thiele über seine Arbeit als Freelance Flutter Developer, sein Startup LinkFive und wie man auch mit Baby entspannt durch Japan reisen kann.
 
 ## YouTube Videos
 
+* **2026-04-30**: [Agentic Coding: The Future of Software Development? (with Hamze)](https://www.youtube.com/watch?v=zH_amAf2YgE)
 * **2025-11-06**: [Build Your Own AI Sidekick with Flutter (Fluttercon EU 2025)](https://www.youtube.com/watch?v=FjIuI-XjLWA)
 * **2025-10-17**: [Powering offline-first forestry in Europe's wilds (Fluttercon EU 2025)](https://www.youtube.com/watch?v=QCwwKWm9UDQ)
 * **2024-10-09**: [Powering offline-first forestry in Europe's wilds (Local-First Conf)](https://www.youtube.com/watch?v=Ifi7dfH3Crw)
