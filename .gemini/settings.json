@@ -1,6 +1,5 @@
 {
   "experimental": {
-    "plan": true,
     "enableAgents": true
   },
   "hooks": {
@@ -36,6 +35,13 @@
   },
   "ui": {
     "showUserIdentity": false
-  }
+  },
+  "general": {
+    "plan": {
+      "enabled": true
+    }
+  },
+  "agents": {
+    "overrides": {}
   }
 }
